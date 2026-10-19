@@ -1,959 +1,343 @@
-<img src="https://cdn.jsdelivr.net/gh/D-Sketon/hugo-theme-reimu@main/images/screenshot.png"/>
-<div align = center>
-  <h1>hugo-theme-reimu</h1>
-  <img alt="version" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2FD-Sketon%2Fhugo-theme-reimu%2Fraw%2Fmain%2Fpackage.json&query=%24.version&label=version">
-  <img alt="GitHub License" src="https://img.shields.io/github/license/D-Sketon/hugo-theme-reimu">
-  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/D-Sketon/hugo-theme-reimu">
-  <p align="center">
-  💘 博麗 霊夢 💘
-  </p>
-[演示网站](https://d-sketon.github.io/hugo-theme-reimu) | [迁移指南](https://d-sketon.github.io/20241110/hexo-to-hugo-guide/)
 
-简体中文 | [English](https://github.com/D-Sketon/hugo-theme-reimu/blob/main/README.en.md)
+# FrankGraen's Personal Website
+
+Robotics, world models and reinforcement learning. Built with Astro and the
+[Firefly theme](https://github.com/CuteLeaf/Firefly).
+
+- Website: https://frankgraen.github.io/frankg.github.io/
+- Setup, editing and publishing: [SITE-GUIDE.md](./SITE-GUIDE.md)
+- Content: `src/content/projects/`, `src/content/posts/`, `src/content/dynamic/`
+- Configuration: `src/config/`; GitHub Pages base: `siteBase` in `siteConfig.ts`
+- Development: `pnpm install --frozen-lockfile`, then `pnpm dev`
+- Deployment: pushes to `main` run `.github/workflows/deploy.yml` automatically.
+
+The original theme documentation and attribution follow.
+
+<img src="./docs/images/1131.png" width = "350" height = "500" alt="Firefly" align=right />
+
+<div align="center">
+
+# 流萤 / Firefly 
+> 一款清新美观的 Astro 静态博客主题模板
+> 
+> ![Node.js >= 22](https://img.shields.io/badge/node.js-%3E%3D22-brightgreen) 
+![pnpm >= 11](https://img.shields.io/badge/pnpm-%3E%3D9-blue)
+![Astro](https://img.shields.io/badge/Astro-7-orange)
+![TypeScript](https://img.shields.io/badge/TypeScript-6-blue)
+>
+> [![Stars](https://img.shields.io/github/stars/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/stargazers)
+[![Forks](https://img.shields.io/github/forks/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/network/members)
+[![Issues](https://img.shields.io/github/issues/CuteLeaf/Firefly)](https://github.com/CuteLeaf/Firefly/issues)
+> 
+> [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Z8Z41NQALY)
+>
+> **QQ交流群：[1087127207](https://qm.qq.com/q/ZGsFa8qX2G)**
+> 
+> ![GitHub License](https://img.shields.io/github/license/CuteLeaf/Firefly)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/CuteLeaf/Firefly)
+[![爱发电打赏](https://img.shields.io/badge/爱发电-打赏作者-ff69b4.svg)](https://ifdian.net/a/cuteleaf)
 
 </div>
 
-A Hakurei Reimu style Hugo theme. Migrated from [hexo-theme-reimu](https://github.com/D-Sketon/hexo-theme-reimu).
 
 ---
+📖 README：
+**[简体中文](README.md)** | **[繁體中文](docs/README.zh-TW.md)** | **[English](README.en.md)** | **[日本語](docs/README.ja.md)** | **[한국어](docs/README.ko.md)**
 
-|framework|repository|version|stars|
-|-|-|-|-|
-|[Hexo](https://hexo.io/)|[hexo-theme-reimu](https://github.com/D-Sketon/hexo-theme-reimu)|<img alt="version" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2FD-Sketon%2Fhexo-theme-reimu%2Fraw%2Fmain%2Fpackage.json&query=%24.version&label=version">|<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/D-Sketon/hexo-theme-reimu">|
-|[Astro](https://astro.build)|[astro-theme-reimu](https://github.com/D-Sketon/astro-theme-reimu)|<img alt="version" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2FD-Sketon%2Fastro-theme-reimu%2Fraw%2Fmain%2Fpackage.json&query=%24.version&label=version">|<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/D-Sketon/astro-theme-reimu">|
-|[Hugo](https://gohugo.io)|[hugo-theme-reimu](https://github.com/D-Sketon/hugo-theme-reimu)|<img alt="version" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2FD-Sketon%2Fhugo-theme-reimu%2Fraw%2Fmain%2Fpackage.json&query=%24.version&label=version">|<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/D-Sketon/hugo-theme-reimu">|
+🚀 快速指南：
+[**🖥️在线预览**](https://firefly.cuteleaf.cn/) /
+[**📝使用文档**](https://docs-firefly.cuteleaf.cn/) /
+[**🍀我的博客**](https://blog.cuteleaf.cn) 
 
-**项目刚刚开始，欢迎提出 Issue 和 PR！**
+⚡ 静态站点生成: 基于 Astro 的超快加载速度和 SEO 优化
 
-## 特性
+🎨 现代化设计: 简洁美观的界面，支持自定义主题色
 
-### 基础功能
-- ✨ 完整的博客功能
-- 🔄 兼容 Hugo 0.116.0 及以上版本
-- 📱 响应式布局
-- 🌙 暗黑模式支持
+📱 移动友好: 完美的响应式体验，移动端专项优化
 
-### 代码与数学
-- 🖥️ 代码高亮与复制
-- ➗ KaTeX / MathJax3 数学公式支持
-- 📊 Mermaid 流程图支持
+🔧 高度可配置: 大部分功能模块均可通过配置文件自定义
 
-### 搜索与评论
-- 🔍 Algolia 搜索集成
-- 💬 多评论系统支持：
-  - Valine
-  - Waline
-  - Twikoo
-  - Gitalk
-  - Giscus
+<table width="100%" align="center">
+  <tr>
+    <td colspan="3" align="center">
+      <img src="./docs/images/1.webp" >
+      <br>横幅模式</td>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><img src="./docs/images/3.webp" width="300"><br>透明覆盖模式</td>
+    <td align="center"><img src="./docs/images/2.webp" width="300"><br>全屏壁纸模式</td>
+    <td align="center"><img src="./docs/images/4.webp" width="300"><br>纯色模式</td>
+  </tr>
+</table>
+<img alt="Lighthouse" src="./docs/images/Lighthouse.png" />
 
-### 统计与分析
-- 📊 文章阅读统计（Valine / Waline）
-- 👥 访客统计（不蒜子）
+>[!TIP]
+>
+>Firefly 是一款基于 Astro 框架和 Fuwari 模板开发的清新美观且现代化个人博客主题模板，专为技术爱好者和内容创作者设计。该主题融合了现代 Web 技术栈，提供了丰富的功能模块和高度可定制的界面，让您能够轻松打造出专业且美观的个人博客网站。
+>
+>**如果你参考或使用了 Firefly 的组件设计和相关代码，请注明来自 Firefly。**
+>
+>Firefly 也保留了原版 fuwari 的布局，可根据自己的喜好在配置文件中自由切换。
+>
+>**更多布局配置及演示请查看：[Firefly 布局系统详解](https://firefly.cuteleaf.cn/posts/guide/firefly-layout-system/)**
+>
+>Firefly 支持 i18n 多语言 UI，但除了简体中文，其他语言均为 AI 翻译转换，如有错误，欢迎提交 [Pull Request](https://github.com/CuteLeaf/Firefly/pulls) 修正。
 
-### 媒体与交互功能
-- 🎵 音乐播放器支持：
-  - Aplayer
-  - Meting
-- 🖼️ 图片懒加载
-- ⚡ 加载动画
-- 🖱️ 鼠标特效：
-  - 动画效果
-  - 灵梦鼠标指针
-- 👾 Live2D / Live2D-widgets 集成
+## ✨ 功能特性
 
-### 导航与结构
-- 📑 目录导航（TOC）
-- 🔄 PJAX 支持
-- 🔧 ServiceWorker 实现
-- 📰 RSS 订阅
+### 核心功能
 
-### 设计与自定义
-- 🎨 图标支持：
-  - Iconfont
-  - FontAwesome
-- 🔗 自定义短代码：
-  - 内部链接
-  - 外部链接
-  - 友情链接
-- ©️ 文章版权声明
-- 🌐 自定义 CDN 源配置
-- 🎨 分享卡片功能
+- [x] **Astro + Tailwind CSS** - 基于现代技术栈的超快静态站点生成
+- [x] **流畅动画** - Swup 页面过渡动画，提供丝滑的浏览体验
+- [x] **响应式设计** - 完美适配桌面端、平板和移动设备
+- [x] **多语言支持** - i18n 国际化，UI 支持简体中文、繁体中文、英文、日文、俄语、韩文
+- [x] **全文搜索** - 基于 Pagefind 的客户端搜索，支持文章内容索引
 
-## 安装
+### 个性化
+- [x] **动态侧边栏** - 支持配置单侧边栏、双侧边栏
+- [x] **文章布局** - 支持配置(单列)列表、网格(多列/瀑布流)布局
+- [x] **字体管理** - 支持自定义字体，丰富的字体选择器
+- [x] **页脚配置** - HTML 内容注入，完全自定义
+- [x] **亮暗色模式** - 支持亮色/暗色/跟随系统三种模式
+- [x] **导航栏自定义** - Logo、标题、链接全面自定义
+- [x] **壁纸模式切换** - 横幅壁纸、全屏壁纸、全屏透明壁纸、纯色背景
+- [x] **主题色自定义** - 360° 色相调节
+
+如果你有好用的功能和优化，请提交 [Pull Request](https://github.com/CuteLeaf/Firefly/pulls)
+
+## 🚀 快速开始
+
+### 环境要求
+
+- Node.js ≥ 22
+- pnpm ≥ 11
+
+### 本地开发部署
+
+1. **克隆仓库：**
+   ```bash
+   git clone https://github.com/Cuteleaf/Firefly.git
+   cd Firefly
+   ```
+   
+   **先 [Fork](https://github.com/CuteLeaf/Firefly/fork) 到自己仓库再克隆（推荐），记得先点 Star 再 Fork 哦！**
+
+   ```bash
+   git clone https://github.com/you-github-name/Firefly.git
+   cd Firefly
+   ```
+3. **安装依赖：**
+   ```bash
+   # 如果没有安装 pnpm，先安装
+   npm install -g pnpm
+   
+   # 安装项目依赖
+   pnpm install
+   ```
+
+4. **配置博客：**
+   - 编辑 `src/config/` 目录下的配置文件自定义博客设置
+
+5. **启动开发服务器：**
+   ```bash
+   pnpm dev
+   ```
+   博客将在 `http://localhost:4321` 可用
+
+### 平台托管部署
+- **参考[官方指南](https://docs.astro.build/zh-cn/guides/deploy/)将博客部署至 Vercel, Netlify, Cloudflare Pages, EdgeOne Pages 等。**
+- **Vercel**、**Netlify** 等主流平台自动部署，会根据环境自动选择适配器。
+
+   框架预设： `Astro`
+
+   根目录： `./`
+
+   输出目录： `dist`
+
+   构建命令： `pnpm run build`
+
+   安装命令： `pnpm install`
+
+   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/CuteLeaf/Firefly&project-name=Firefly&repository-name=Firefly)
+   [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/CuteLeaf/Firefly)
+
+## 📖 配置说明
+
+> 📚 **详细配置文档**: 查看 [Firefly 使用文档](https://docs-firefly.cuteleaf.cn/) 获取完整的配置指南
+
+### 设置网站语言
+
+要设置博客的默认语言，请编辑 `src/config/siteConfig.ts` 文件：
+
+```typescript
+// 定义站点语言
+const SITE_LANG = "zh_CN";
+```
+
+**支持的语言代码：**
+- `zh_CN` - 简体中文
+- `zh_TW` - 繁体中文
+- `en` - 英文
+- `ja` - 日文
+- `ru` - 俄文
+- `ko` - 韩文
+
+### 配置文件结构
+
+```
+src/
+├── config/
+│   ├── index.ts                  # 配置索引文件
+│   ├── siteConfig.ts             # 站点基础配置
+│   ├── analyticsConfig.ts        # 统计分析配置
+│   ├── announcementConfig.ts     # 公告配置
+│   ├── backgroundWallpaper.ts    # 背景壁纸配置
+│   ├── commentConfig.ts          # 评论系统配置
+│   ├── coverImageConfig.ts       # 封面图配置
+│   ├── displaySettingsConfig.ts  # 设置面板配置
+│   ├── dynamicConfig.ts          # 动态页面配置
+│   ├── effectsConfig.ts          # 动画特效配置（樱花等）
+│   ├── expressiveCodeConfig.ts   # 代码高亮配置
+│   ├── fontConfig.ts             # 字体配置
+│   ├── FooterConfig.html           # 页脚配置
+│   ├── friendsConfig.ts          # 友链配置
+│   ├── galleryConfig.ts          # 相册配置
+│   ├── licenseConfig.ts          # 许可证配置
+│   ├── musicConfig.ts            # 音乐播放器配置
+│   ├── navBarConfig.ts           # 导航栏配置
+│   ├── pioConfig.ts              # 看板娘配置
+│   ├── mermaidConfig.ts          # Mermaid 图表配置
+│   ├── plantumlConfig.ts         # PlantUML 图表配置
+│   ├── profileConfig.ts          # 用户资料配置
+│   ├── sidebarConfig.ts          # 侧边栏布局配置
+│   └── sponsorConfig.ts          # 打赏配置
+```
+
+## ⚙️ 文章 Frontmatter
+
+```yaml
+---
+title: My First Blog Post
+published: 2023-09-09
+description: This is the first post of my new Astro blog.
+image: ./cover.jpg  # 或使用 "api" 来启用随机封面图
+tags: [Foo, Bar]
+category: Front-end
+draft: false
+lang: zh-CN      # 仅当文章语言与 `siteConfig.ts` 中的网站语言不同时需要设置
+pinned: false    # 置顶
+comment: true    # 是否允许评论
+---
+```
+
+## 动态
+
+动态文件保存在 `src/content/dynamic/` 中，一个 Markdown 文件对应一条动态。可以使用快捷命令创建：
 
 ```bash
-cd themes
-git clone --single-branch --branch main https://github.com/D-Sketon/hugo-theme-reimu.git
+pnpm new-d 今天心情不错，出去吃了一顿火锅
 ```
 
-并修改 `hugo.toml` 中的 theme
-
-```toml
-theme = 'hugo-theme-reimu'
-```
-
-## 使用
-
-<details>
-<summary>创建配置</summary>
-
-### 创建配置
-
-#### 主题配置
-
-在外层 `config` 文件夹下创建 `_default` 文件夹，然后将主题内的 `config/_default/params.yml` 复制到 `_default` 文件夹下，此文件作为主题配置文件，可在此文件中修改主题配置
-
-#### 数据配置
-
-将主题内的 `config/data/` 文件夹内的所有文件复制到外层 `data` 文件夹下，此文件夹内的文件用于配置主题内的数据：
-
-- `covers.yml` 用于配置随机封面图片
-- `friends.yml` 用于配置友链
-- `vendor.yml` 用于配置第三方库的 CDN 源
-
-#### 静态资源配置
-
-主题的静态资源（favicon，头图等）位于 `static` 文件夹内，你可以在外层 `static` 文件夹下创建相应的文件夹，然后将主题内的文件复制到外层文件夹下，以覆盖主题内的默认文件
-
-> 总之一句话，不建议直接修改主题内的文件，而是在外层创建相应的文件夹，然后将主题内的文件复制到外层文件夹下，以覆盖主题内的默认文件，这样便于主题升级
-
-#### 语言配置
-
-reimu 支持多语言。如果你想要使用中文，请在 `hugo.toml` 中添加如下配置
-
-```toml
-languageCode = 'zh-CN'
-defaultContentLanguage = 'zh-CN'
-[languages]
-[languages.zh-CN]
-languageName = '简体中文'
-weight = 1
-```
-
-</details>
-<details>
-
-<summary>基本结构</summary>
-
-### 基本结构
-
-为了保证显示正确，请参考 `_example` 在 `content` 中建立 `archives` 和 `post` 文件夹 （里面的 `_index.md` 不可省略，且注意 `post` 的 `draft` 为 `true`）
-
-#### archives
-
-- `_index.md` 用于显示归档页面，不可省略
-
-#### post
-
-文章请在此目录下创建，注意 `draft` 为 `true` 的文章不会显示在首页
-
-- `_index.md` 用于忽略 `post/index.html` 的生成，不可省略
-
-#### about\.md
-
-关于页面
-
-#### friend\.md
-
-友链页面
-
-</details>
-
-<details>
-<summary>头像、封面、头图和图标</summary>
-
-### 头像、封面、头图和favicon
-
-#### 头像
-
-头像应保存于 `static/avatar/avatar.webp`，可在 `params.yml` 中修改文件名
-
-```yaml
-avatar: "avatar.webp"
-```
-
-#### 封面
-
-随机封面图片请参考主题内的 `data/covers.yml` 文件结构，在外层 `data` 文件夹下创建 `covers.yml` 文件，格式如下：
-
-```yaml
-- https://example.com/1.jpg
-- https://example.com/2.jpg
-```
-
-封面显示逻辑如下
-
-- 如果文章的 Front matter 中包含 cover 的 url，则该文章头图和首页缩略图均显示该 url
+`pnpm new-dynamic <content>` 也可以使用，和 `new-d` 完全等价。
 
 ```yaml
 ---
-title: Hello World
-cover: https://example.com
+published: 2026-07-15 16:15:29
+pinned: true  # 置顶
+location: China # 位置
 ---
+
+动态内容可以使用 Markdown 语法。
 ```
 
-- 如果文章的 Front matter 中包含 cover 为 `false`，则该文章不显示头图（首页上仍然是随机图片）
+也支持对接 [Memos](https://www.usememos.com/) 作为数据源，在 `src/config/dynamicConfig.ts` 中配置 `memos` 选项即可实时获取 Memos 动态，支持置顶同步和图片附件展示。详见[动态文档](https://docs-firefly.cuteleaf.cn/zh/guide/dynamic.html)。
 
-```yaml
----
-title: Hello World
-cover: false
----
-```
+## 🧩 Markdown 扩展语法
 
-- 如果文章的 Front matter 中包含 cover 为 `rgb(xxx,xxx,xxx)`，则该文章头图为对应的渐变纯色（首页上仍然是随机图片）
+除了 Astro 默认支持的 [GitHub Flavored Markdown](https://github.github.com/gfm/) 之外，还包含了一些额外的 Markdown 功能：
 
-```yaml
----
-title: Hello World
-cover: rgb(255,117,117)
----
-```
+- 提醒块（Admonitions） - 支持 GitHub, Obsidian, VitePress, Docusaurus 四种风格主题配置 ([预览和用法](https://firefly.cuteleaf.cn/posts/markdown-extended/))
+- GitHub 仓库卡片 ([预览和用法](https://firefly.cuteleaf.cn/posts/markdown-extended/))
+- 基于 Expressive Code 的增强代码块 ([预览](http://firefly.cuteleaf.cn/posts/code-examples/) / [文档](https://expressive-code.com/))
 
-- 否则查找 `data` 文件夹中的 `covers.yml`，并从中随机挑选图片
-- 若上述文件均不存在，则显示头图
+## 🧞 指令
 
-#### 头图
+下列指令均需要在项目根目录执行：
 
-头图保存于 `themes/hugo-theme-reimu/static/images/banner.webp`，可在 `params.yml` 中修改路径和名字
+| Command                    | Action                                 |
+| :------------------------- | :------------------------------------- |
+| `pnpm install`             | 安装依赖                               |
+| `pnpm dev`                 | 在 `localhost:4321` 启动本地开发服务器 |
+| `pnpm build`               | 构建网站至 `./dist/`                   |
+| `pnpm preview`             | 本地预览已构建的网站                   |
+| `pnpm check`               | 检查代码中的错误                       |
+| `pnpm format`              | 使用 Biome 格式化您的代码              |
+| `pnpm new-post <filename>` | 创建新文章                             |
+| `pnpm new-d <content>`     | 创建一条动态                           |
+| `pnpm new-dynamic <content>` | 创建一条动态（完整命令）              |
+| `pnpm astro ...`           | 执行 `astro add`, `astro check` 等指令 |
+| `pnpm astro --help`        | 显示 Astro CLI 帮助                    |
 
-```yaml
-banner: "images/banner.webp"
-```
+## 🙏 致谢
 
-#### Favicon
+非常感谢 [saicaca](https://github.com/saicaca) 开发的 [fuwari](https://github.com/saicaca/fuwari) 模板，Firefly 就是基于这个模板二次开发
 
-favicon 保存于 `themes/hugo-theme-reimu/static/favicon.ico`，可自行覆盖替换
+流萤部分相关图片素材版权归游戏 [《崩坏：星穹铁道》](https://sr.mihoyo.com/) 开发商 [米哈游](https://www.mihoyo.com/) 所有
 
-</details>
-<details>
-<summary>代码块</summary>
+### 技术栈
 
-### 代码块
+- [Astro](https://astro.build) 
+- [Tailwind CSS](https://tailwindcss.com) 
+- [Iconify](https://iconify.design)
 
-为保证代码块的正确显示，请保证 `hugo.toml` 中有如下配置
+### 灵感项目
 
-```toml
-[markup.highlight]
-guessSyntax = true
-noClasses = false
-```
+- [fuwari](https://github.com/saicaca/fuwari)
+- [hexo-theme-shoka](https://github.com/amehime/hexo-theme-shoka)
+- [astro-koharu](https://github.com/cosZone/astro-koharu)
+- [Mizuki](https://github.com/matsuzaka-yuki/Mizuki)
 
-代码块同时提供了代码粘贴功能，点击代码块右上角的复制按钮即可复制代码。在 `params.yml` 中可以对复制功能进行配置。  
-`success` 为复制成功时的提示，`fail` 为复制失败时的提示。此外，可以配置版权声明，当复制的字符数大于 `count` 时会在复制的内容后面添加 `content` 版权声明。
+### 其他参考
+- 博主`霞葉`的 [Bangumi 收藏](https://kasuha.com/posts/fuwari-enhance-ep2/) 页面组件
+- 哔哩哔哩up主 `公公的日常` 的Q版 [流萤看板娘 Spine 切片数据](https://www.bilibili.com/video/BV1fuVzzdE5y) 
 
-```yaml
-clipboard:
-  success: 复制成功(*^▽^*)
-  fail: 复制失败 (ﾟ⊿ﾟ)ﾂ
-  copyright:
-    enable: false
-    count: 50 # 大于多少字符添加版权声明
-    content: 本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！
-```
+## 📝 许可协议
 
-v0.2.0 添加了配置用于控制代码块的默认展开状态，`expand` 可以设置为 `true`、`false` 或数字，数字表示当代码块的行数大于该数字时默认收缩。
+本项目遵循 [MIT license](https://mit-license.org/) 开源协议，详细查看 [LICENSE](./LICENSE) 文件
 
-```yaml
-code_block:
-  expand: true # true | false | number
-```
+最初 Fork 自 [saicaca/fuwari](https://github.com/saicaca/fuwari)，感谢原作者的贡献
 
-</details>
-<details>
-<summary>站内评论</summary>
+**版权声明：**
+- Copyright (c) 2024 [saicaca](https://github.com/saicaca) - [fuwari](https://github.com/saicaca/fuwari)
+- Copyright (c) 2025 [CuteLeaf](https://github.com/CuteLeaf) - [Firefly](https://github.com/CuteLeaf/Firefly) 
 
-### 站内评论
+根据 MIT 开源协议，你可以自由使用、修改、分发代码，但需保留上述版权声明。
 
-> 站内评论可以使用 Front matter 中的 `comments` 独立控制每篇文章是否显示评论。  
-> 当 `comments` 为 `false` 时不显示评论，`true` 或不填时根据 `params.yml` 的配置决定是否显示。
+## 🍀 贡献者
 
-若基于 [Valine](https://valine.js.org/)  
-请参考其官方文档完成 `LeanCloud` 的配置，并在 `params.yml` 中将 `valine.enable` 改为 `true`，并填入自己的 `appId` 和 `appKey`
+感谢以下贡献者对本项目做出的贡献，如有问题或建议，请提交 [Issue](https://github.com/CuteLeaf/Firefly/issues) 或 [Pull Request](https://github.com/CuteLeaf/Firefly/pulls)。
 
-```yaml
-valine:
-  enable: true
-  appId: "your appId"
-  appKey: "your appKey"
-```
+><a href="https://github.com/CuteLeaf/Firefly/graphs/contributors">
+>  <img src="https://contrib.rocks/image?repo=CuteLeaf/Firefly" />
+></a>
 
-若基于 [Waline](https://waline.js.org/)  
-请参考其[官方文档](https://waline.js.org/guide/get-started/)完成 `LeanCloud` 的配置，并在 `params.yml` 中将 `waline.enable` 改为 `true`，并填入自己的 `serverURL`
+感谢以下贡献者对原项目 [fuwari](https://github.com/saicaca/fuwari) 做出的贡献，为本项目奠定了基础。
 
-```yaml
-waline:
-  enable: true
-  serverURL: "your server url"
-  lang: zh-CN
-  locale: {} # https://waline.js.org/guide/features/i18n.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AF%AD%E8%A8%80
-  emoji:
-    - https://unpkg.com/@waline/emojis@1.2.0/weibo
-    - https://unpkg.com/@waline/emojis@1.2.0/alus
-    - https://unpkg.com/@waline/emojis@1.2.0/bilibili
-    - https://unpkg.com/@waline/emojis@1.2.0/qq
-    - https://unpkg.com/@waline/emojis@1.2.0/tieba
-    - https://unpkg.com/@waline/emojis@1.2.0/tw-emoji
-  meta:
-    - nick
-    - mail
-    - link
-  requiredMeta:
-    - nick
-    - mail
-  wordLimit: 0
-  pageSize: 10
-  pageview: true
-```
+><a href="https://github.com/saicaca/fuwari/graphs/contributors">
+>  <img src="https://contrib.rocks/image?repo=saicaca/fuwari" />
+></a>
 
-若基于 [twikoo](https://twikoo.js.org)  
-请参考其[官方文档](https://twikoo.js.org/quick-start.html)完成 腾讯云 或 Vercel 部署，并在 `params.yml` 中将 `twikoo.enable` 改为 `true`，并填入自己的 `envId`
+## ⭐ Star History
 
-```yml
-twikoo:
-  enable: true
-  envId: # 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
-  region:
-```
+[![Star History Chart](https://api.star-history.com/svg?repos=CuteLeaf/Firefly&type=Date)](https://star-history.com/#CuteLeaf/Firefly&Date)
 
-若基于 [giscus](https://giscus.app/zh-CN)  
-请参考文档完成仓库的配置，并在 `params.yml` 中将 `giscus.enable` 改为 `true`，并填入对应的数据
 
-```yml
-giscus:
-  enable: true
-  repo: "your repo"
-  repoId: "your repoId"
-  category: "your category"
-  categoryId: "your categoryId"
-  mapping: mapping
-  strict: 0
-  reactionsEnabled: 1
-  emitMetadata: 0
-  inputPosition: bottom
-  # commentTheme: preferred_color_scheme invalid
-  lang: zh-CN
-```
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
 
-若基于 [gitalk](https://gitalk.github.io/)  
-请参考其[官方文档](https://github.com/gitalk/gitalk?tab=readme-ov-file#usage)完成仓库的配置，并在 `params.yml` 中将 `gitalk.enable` 改为 `true`，并填入对应的数据
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
 
-```yml
-gitalk:
-  enable: true
-  clientID: "your application client ID"
-  clientSecret: "your application client secret"
-  repo: "your repo"
-  owner: "repo owner"
-  admin: "repo owner and collaborators"
-  md5: false # 是否使用 md5 加密路径
-```
-
-</details>
-
-<details>
-<summary>站内搜索</summary>
-
-### 站内搜索
-
-基于 [Algolia](https://www.algolia.com/)，请在外层 `hugo.toml` 中添加如下配置
-
-```toml
-[outputs]
-home = ["Algolia", "HTML", "RSS"]
-
-[outputFormats.Algolia]
-baseName = "algolia"
-isPlainText = true
-mediaType = "application/json"
-notAlternative = true
-```
-
-这样会在 `public` 文件夹下生成 `algolia.json` 文件，用于 Algolia 搜索。接着你可以使用诸如 `atomic-algolia` 等插件将其上传到 Algolia
-
-同时，在 `params.yml` 中将 `algolia_search.enable` 改为 `true`，并填写相关信息（**注意！这里填写的是Search-Only Key，不允许填写Admin Key！！否则可能被攻击**）
-
-```yaml
-algolia_search:
-  enable: true
-```
-
-</details>
-<details>
-<summary>数学公式</summary>
-
-### 数学公式
-
-请先在外层 `hugo.toml` 中添加如下配置
-
-```toml
-[markup.goldmark.extensions.passthrough]
-enable = true
-delimiters.block = [["\\[", "\\]"], ["$$", "$$"]]
-delimiters.inline = [["\\(", "\\)"], ["$", "$"]]
-```
-
-并在需要使用数学公式的文章的 Front matter 中添加 `math` 为 `true`
-
-```yaml
----
-math: true
----
-```
-
-> 注意不要同时开启 KaTeX 和 MathJax3
-
-#### KaTeX
-
-若基于 [Katex](https://github.com/KaTeX/KaTeX)，请在 `params.yml` 中将 `math.katex.enable` 改为 `true`
-
-```yaml
-math:
-  katex:
-    enable: true
-```
-
-#### MathJax3
-
-若基于 [MathJax3](https://www.mathjax.org/)，请在 `params.yml` 中将 `math.mathjax.enable` 改为 `true`，并可在 `options` 中添加配置（由于 Hugo 会自动将对象的key转变为全小写，所以配置需要放在一个数组中避免默认行为）
-
-```yaml
-math:
-  mathjax:
-    enable: true
-    options: [{}]
-```
-
-</details>
-<details>
-<summary>Mermaid</summary>
-
-### Mermaid
-
-流程图基于 [Mermaid](https://mermaid.js.org/#/)，请在需要使用流程图的文章的 Front matter 中添加 `mermaid` 为 `true`
-
-```yaml
----
-mermaid: true
----
-```
-
-</details>
-<details>
-<summary>RSS</summary>
-
-### RSS
-
-RSS 自带，无需额外配置
-
-</details>
-
-<details>
-<summary>Icon</summary>
-
-### Icon
-
-Icon 默认使用本项目提供的 iconfont
-
-```yml
-icon_font: 4552607_0khxww3tj3q9
-```
-
-如果想要继续使用 fontawesome 图标，请将 `icon_font` 设置为 `false`，此时会使用 `vendor.yml` 中对应的 fontawesome
-
-```yml
-fontawesome:
-  high_priority:
-    - webcache|@fortawesome/fontawesome-free@6.5.1/css/regular.min.css
-    - webcache|@fortawesome/fontawesome-free@6.5.1/css/solid.min.css
-  low_priority:
-    - webcache|@fortawesome/fontawesome-free@6.5.1/css/brands.min.css
-    - webcache|@fortawesome/fontawesome-free@6.5.1/css/v5-font-face.min.css
-    - webcache|@fortawesome/fontawesome-free@6.5.1/css/v4-font-face.min.css
-```
-
-</details>
-
-<details>
-<summary>扩展功能</summary>
-
-### 扩展功能
-
-#### 暗黑模式
-
-默认为 `auto`，根据用户系统设置自动切换。可以设置为 `true` 或 `false` 改变默认状态
-
-```yaml
-dark_mode:
-  # true 代表暗黑模式默认开启
-  # false 代表暗黑模式默认关闭
-  # auto 代表根据用户系统设置自动切换
-  enable: auto # true | false | auto
-```
-
-#### Pace 进度条
-
-默认开启
-
-```yaml
-pace:
-  enable: true
-```
-
-#### Firework 鼠标特效
-
-默认开启
-
-```yaml
-firework:
-  enable: true
-```
-
-具体配置请查看 [mouse-firework](https://github.com/D-Sketon/mouse-firework)
-
-#### PJAX
-
-默认关闭
-
-```yaml
-pjax:
-  enable: false
-```
-
-> PJAX 用于那些需要添加音乐播放器等需要 SPA 的用户。但其仍然属于实验性质，引入后可能会出现诸如**脚本无法执行**、**脚本重复执行**、**页面渲染混乱**等 BUG。请慎重考虑！
-
-#### ServiceWorker
-
-默认关闭
-
-```yaml
-service_worker:
-  enable: false
-```
-
-#### Live2D
-
-默认关闭
-
-```yaml
-live2d:
-  enable: false
-  position: left # left | right
-```
-
-#### Live2D Widgets
-
-默认关闭
-
-```yaml
-live2d_widgets:
-  enable: false
-  position: left # left | right
-```
-
-#### Reimu 鼠标指针
-
-默认开启
-
-```yml
-reimu_cursor: true
-```
-
-#### 响应式头图
-
-默认关闭，打开后并提供对应尺寸的图片和媒体查询可以在一定程度上提高移动端的 LCP
-
-```yml
-banner_srcset:
-enable: false
-srcset:
-  - src: "images/banner-600w.webp"
-    media: "(max-width: 479px)"
-  - src: "images/banner-800w.webp"
-    media: "(max-width: 799px)"
-  - src: "images/banner.webp"
-    media: "(min-width: 800px)"
-```
-
-#### Quicklink
-
-默认开启，打开后可以在用户停留在页面时预加载链接，提高用户体验
-
-```yml
-quicklink:
-  enable: true
-  timeout: 3000 # 预加载超时时间
-  priority: true # 是否优先加载
-  ignores: [] # 忽略的链接，仅支持字符串
-```
-
-#### 文章版权声明
-
-默认关闭
-
-```yml
-article_copyright:
-enable: false # 是否展示版权卡片？
-content:
-  author: # true | false 版权卡片展示作者？
-  link: # true | false 版权卡片展示链接？
-  title: # true | false 版权卡片展示标题？
-  date: # true | false 版权卡片展示创建日期？
-  updated: # true | false 版权卡片展示更新日期？
-  license: # true | false 版权卡片展示协议？
-```
-
-此外，也可以通过文章的 front-matter 控制，其优先级高于全局配置
-
-```yaml
----
-copyright: true # 是否展示版权卡片？
----
-```
-
-#### 文章过期提醒
-
-默认关闭
-
-```yml
-outdate:
-  enable: false
-  daysAgo: 180 # 多少天前的文章算过期
-  message: 本文最后更新于 {time}，请注意文中内容可能已经发生变化。
-```
-
-#### 赞助
-
-默认关闭
-
-```yml
-sponsor:
-  enable: false # 是否展示赞助二维码？
-  tip: 请作者喝杯咖啡吧！ # 赞助提示
-  icon:
-    url: "../images/taichi.png" # 赞助图标，相对于 css/main.css 的路径，所以需要向上一级才能找到 images 文件夹
-    rotate: true # 是否旋转图标
-    mask: true # 是否将图片作为遮罩（即只显示 png 图片的轮廓）
-  qr:
-    - name: 支付宝 # 二维码名称
-      src: "sponsor/alipay.jpg" # 示例二维码路径，位于 static/sponsor/aliapy.jpg
-```
-
-此外，也可以通过文章的 front-matter 控制，其优先级高于全局配置
-
-```yaml
----
-sponsor: true # 是否展示赞助二维码？
----
-```
-
-#### 音乐播放器（v0.4.0+）
-
-> 使用前建议先打开 Pjax，否则会出现播放器自动暂停的问题
-
-使用Aplayer + Meting（可选）默认关闭
-
-##### 纯Aplayer
-
-将 `player.aplayer.enable` 设置为 `true`，并在 `player.aplayer.options` 中参考 [Aplayer Docs](https://aplayer.js.org/#/home?id=options) 进行配置
-
-```yml
-player:
-  aplayer:
-    enable: true
-    options:
-      audio: [] # audio list
-      fixed:
-      autoplay:
-      loop:
-      order:
-      preload: 
-      volume:
-      mutex:
-      listFolded:
-      lrcType:
-```
-
-##### Aplayer + Meting
-
-同时将 `player.aplayer.enable` 和 `player.meting.enable` 设置为 `true`，并在 `player.meting.options` 中参考 [Meting Docs](https://github.com/metowolf/MetingJS?tab=readme-ov-file#option) 进行配置，`player.aplayer.options` 为 Aplayer 配置
-
-```yml
-player:
-  aplayer:
-    enable: true
-    options:
-      audio: [] # this option will be overwritten by meting
-      fixed:
-      autoplay:
-      loop:
-      order:
-      preload: 
-      volume:
-      mutex:
-      listFolded:
-      lrcType:
-  meting:
-    enable: true
-    meting_api: # custom api
-    options:
-      id: 
-      server: 
-      type: 
-      auto:
-```
-
-#### 分享链接/卡片（v0.5.0+）
-
-默认关闭，目前支持 `facebook`、`twitter`、`linkedin`、`reddit`、`weibo`、`qq`、`weixin`。
-
-```yml
-share:
-  # - facebook
-  # - twitter
-  # - linkedin
-  # - reddit
-  # - weibo
-  # - qq
-  # - weixin
-```
-
-`weixin` 状态下会生成带有二维码的分享卡片，可保存到本地后分享到微信朋友圈（注意，当文章封面存在跨域问题时无法使用 html-to-image 正确生成含图片的卡片！）
-
-#### 首页目录卡片（v0.6.0+）
-
-默认关闭，打开后可以在首页展示目录卡片，用于代替 widget 中的目录
-```yml
-home_categories:
-  enable: false # 是否展示首页目录卡片？
-  content:
-    - categories: # 目录名称，字符串类型
-      cover: # 卡片封面，不填则使用随机封面
-    - categories:
-      cover:
-```
-
-</details>
-
-<details>
-<summary>内置卡片shortcode</summary>
-
-### 内置卡片shortcode
-
-#### friendLink 友链卡片
-
-```yaml
-{{< friendsLink >}}
-```
-
-无参数，直接读取 `data/friends.yml` 文件
-
-#### postLinkCard 内链卡片
-
-```yaml
-{{<postLinkCard path="?" cover="?" escape="?" >}}
-```
-
-其中第一个参数为文章的 `path`；第二个参数（可选）为卡片展示的封面，如果设置为 `auto` 则自动使用博客的 `banner`；第三个参数（可选，`true | false`）表示文章标题是否被转义
-
-#### externalLinkCard 外链卡片
-
-```yaml
-{{<externalLinkCard title="?" link="?" cover="?">}}
-```
-
-其中第一个参数为文章的标题；第二个参数为文章的外部链接，第三个参数（可选）为卡片展示的封面，如果设置为 `auto` 则自动使用缺省封面
-
-</details>
-
-<details>
-<summary>自定义主题</summary>
-
-#### 定制主题颜色
-
-hugo-theme-reimu 主题支持通过 CSS 变量定制主题颜色，你可以通过修改 `:root` 伪类下的 CSS 变量来定制你的主题颜色。
-
-变量文件位于 `assets/css/_variables.scss`，你可以在这个文件中找到所有的 CSS 变量，但其实只需要修改以下伪类下的变量即可：
-
-```scss
-:root {
-  --red-0: hsl(0, 100%, 50%);
-  --red-1: hsl(0, 100%, 66%);
-  --red-2: hsl(0, 100%, 74%);
-  --red-3: hsl(0, 100%, 84%);
-  --red-4: hsl(0, 100%, 91%);
-  --red-5: hsl(0, 100%, 95%);
-  --red-5-5: hsl(0, 100%, 96%);
-  --red-6: hsl(0, 100%, 98%);
-
-  --color-red-6-shadow: hsla(0, 100%, 65%, 0.6);
-  --color-red-3-shadow: hsla(0, 100%, 65%, 0.3);
-}
-
-[data-theme="dark"] {
-  &:root {
-    --red-4: hsla(0, 100%, 91%, 0.5);
-    --red-5: hsla(0, 100%, 95%, 0.2);
-    --red-5-5: hsla(0, 100%, 96%, 0.1);
-    --red-6: hsla(0, 100%, 98%, 0.2);
-  }
-}
-```
-
-#### 自定义字体
-
-可通过以下配置定义谷歌字体：
-
-```yaml
-# https://fonts.google.com/
-font:
-  article:
-    - Mulish
-    - Noto Serif SC
-  code:
-    # - Ubuntu Mono
-    # - Source Code Pro
-    # - JetBrains Mono
-```
-
-v0.2.0 添加了 `local_font` 配置用于定义本机字体，其优先级比谷歌字体低：
-
-```yaml
-local_font:
-  article:
-    - "-apple-system"
-    - PingFang SC
-    - Microsoft YaHei
-    - sans-serif
-  code:
-    - Menlo
-    - Monaco
-    - Consolas
-    - monospace
-```
-
-#### 定制图标
-
-##### 头部 / 侧边栏图标
-
-v0.1.0 的 `menu` 配置的结构发生了变化，允许用户自定义 icon。icon 为空时默认使用太极图标，你可以填写一个十六进制的数字来自定义 icon，同时支持 fontawesome 和 icon font。
-
-```yaml
-menu:
-  - name: home
-    url: /
-    icon: # 不填默认使用太极图标
-  - name: archives
-    url: /archives
-    icon: f0c1 # 你可以填写一个十六进制的数字来自定义 icon，支持 fontawesome 和 icon font
-  - name: about
-    url: /about
-    icon:
-  - name: friend
-    url: /friend
-    icon:
-```
-
-##### 底部 / 回到顶部 / 赞助图标
-
-v0.1.0 的 `footer`、`top`、`sponsor` 配置均增加了 `icon` 配置用于自定义图标。
-
-- `url` 为图标的路径，相对于 `css/main.css` 的路径，所以需要向上一级才能找到 images 文件夹。
-- `rotate` 为是否旋转图标，默认为 `true`。
-- `mask` 是否将图片作为遮罩（即只显示 png 图片的轮廓），默认为 `true`。
-
-```yaml
-footer:
-  icon:
-    url: "../images/taichi.png" # 相对于 css/main.css 的路径，所以需要向上一级才能找到 images 文件夹
-    rotate: true
-    mask: true
-
-top:
-  icon:
-    url: "../images/taichi.png"
-    rotate: true
-    mask: true
-
-sponsor:
-  icon:
-    url: "../images/taichi.png"
-    rotate: true
-    mask: true
-```
-
-##### 加载图标
-
-v0.1.0 的 `preloader` 配置增加了 `icon` 配置用于自定义图标。icon 为空时默认使用内链的 svg（保证首屏加载速度），你可以填入一个链接来自定义加载图标。
-
-不建议使用过大的图标，以免影响加载速度。
-
-```yaml
-preloader:
-  enable: true
-  text: 少女祈祷中...
-  icon: # 不填默认使用内链的svg（保证首屏加载速度），你可以填入一个链接来自定义加载图标，如 '/images/taichi.png'
-```
-
-##### 锚点图标
-
-v0.1.0 增加了 `anchor_icon` 配置用于自定义锚点图标，默认使用 `#` 图标，你可以填写一个十六进制的数字来自定义 icon，同时支持 fontawesome 和 icon font。
-
-```yaml
-anchor_icon: # 不填默认使用 # 图标
-```
-
-##### 鼠标图标（v0.5.0+）
-
-v0.5.0 增加了 `reimu_cursor.cursor` 配置用于自定义鼠标图标，你可以填写一个相对于 `css/main.css` 的路径来自定义鼠标图标。
-
-```yaml
-reimu_cursor:
-  enable: true
-  cursor:
-    default: ../images/cursor/reimu-cursor-default.png
-    pointer: ../images/cursor/reimu-cursor-pointer.png
-    text: ../images/cursor/reimu-cursor-text.png
-```
-
-</details>
-
-<details>
-<summary>Vendor</summary>
-
-### Vendor
-
-`vendor` 用于存放一些第三方资源，如 fontawesome、iconfont、katex、mathjax 等。
-
-hugo-theme-reimu 的 `vendor` 结构非常灵活，其支持以下几种形式：
-
-- `:cdn|:package@:version/:file`：使用 CDN 加速，如 `cdn_jsdelivr_gh|katex@0.13.11/dist/katex.min.css`，`:cdn`可在 `vendor` 中自行配置。目前自带以下 CDN 源：
-  ```yaml
-  cdn_jsdelivr_gh: https://cdn.jsdelivr.net/gh/ # 仅针对github加速
-  cdn_jsdelivr_npm: https://cdn.jsdelivr.net/npm/ # 仅针对npm加速
-  fastly_jsdelivr_gh: https://fastly.jsdelivr.net/gh/ # 仅针对github加速
-  fastly_jsdelivr_npm: https://fastly.jsdelivr.net/npm/ # 仅针对npm加速
-  unpkg: https://unpkg.com/ # 仅针对npm加速
-  webcache: https://npm.webcache.cn/ # 仅针对npm加速
-  ```
-  用户可根据网络状况自行切换 CDN 源。
-- `https://:path` 开头：直接使用绝对链接，如 `https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css` 
-- `:path` 开头：本地资源，你可以把资源放在 `static` 文件夹下，然后使用诸如 `katex.min.css` 的路径引用
-
-此外，`vendor` 还支持 SRI 校验，你可以在 `vendor` 中使用 `SHA-384` 用于校验资源的完整性，如：
-
-```yaml
-js:
-  clipboard: # 使用 SRI 校验
-    src: webcache|clipboard@2.0.11/dist/clipboard.min.js
-    integrity: sha384-J08i8An/QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q
-  lazysizes: webcache|lazysizes@5.3.2/lazysizes.min.js # 不使用 SRI 校验
-```
-
-以上两种形式均支持，建议对外部 CDN 资源使用 SRI 校验，以确保资源的完整性。
-</details>
-
-## 许可
-
-MIT
+<!-- ALL-CONTRIBUTORS-LIST:END -->

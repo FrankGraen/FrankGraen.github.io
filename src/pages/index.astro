@@ -1,0 +1,26 @@
+---
+import ProjectCard from "@/components/pages/projects/ProjectCard.astro";
+import MainGridLayout from "@/layouts/MainGridLayout.astro";
+import { getSortedProjects } from "@/utils/content-utils";
+import "@/styles/banner-home.css";
+
+const projects = await getSortedProjects();
+---
+
+<MainGridLayout heading="FrankGraen · 王哲雄">
+	<section class="flex flex-col gap-4" aria-labelledby="research-title">
+		<h2 id="research-title" class="sr-only">研究项目</h2>
+		{projects.map((project) => (
+			<ProjectCard
+				id={project.id}
+				title={project.data.title}
+				description={project.data.description}
+				image={project.data.image}
+				tags={project.data.tags}
+				published={project.data.published}
+				status={project.data.status}
+				link={project.data.link}
+			/>
+		))}
+	</section>
+</MainGridLayout>

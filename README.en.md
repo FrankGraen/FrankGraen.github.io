@@ -1,948 +1,330 @@
-<img src="https://cdn.jsdelivr.net/gh/D-Sketon/hugo-theme-reimu@main/images/screenshot.png"/>
-<div align = center>
-  <h1>hugo-theme-reimu</h1>
-  <img alt="version" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2FD-Sketon%2Fhugo-theme-reimu%2Fraw%2Fmain%2Fpackage.json&query=%24.version&label=version">
-  <img alt="GitHub License" src="https://img.shields.io/github/license/D-Sketon/hugo-theme-reimu">
-  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/D-Sketon/hugo-theme-reimu">
-  <p align="center">
-  <p align="center">
-  💘 Hakurei Reimu 💘
-  </p>
 
-[Demo](https://d-sketon.github.io/hugo-theme-reimu)
+<img src="./docs/images/1131.png" width = "350" height = "500" alt="Firefly" align=right />
 
-[简体中文](https://github.com/D-Sketon/hugo-theme-reimu/blob/main/README.md) | English
+<div align="center">
 
+# Firefly
+> A Fresh and Beautiful Astro Static Blog Theme Template
+> 
+> ![Node.js >= 22](https://img.shields.io/badge/node.js-%3E%3D22-brightgreen) 
+![pnpm >= 11](https://img.shields.io/badge/pnpm-%3E%3D9-blue)
+![Astro](https://img.shields.io/badge/Astro-7-orange)
+![TypeScript](https://img.shields.io/badge/TypeScript-6-blue)
+>
+> [![Stars](https://img.shields.io/github/stars/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/stargazers)
+[![Forks](https://img.shields.io/github/forks/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/network/members)
+[![Issues](https://img.shields.io/github/issues/CuteLeaf/Firefly)](https://github.com/CuteLeaf/Firefly/issues)
+> 
+> [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Z8Z41NQALY)
+>
+> **QQ交流群：[1087127207](https://qm.qq.com/q/ZGsFa8qX2G)**
+> 
+> ![GitHub License](https://img.shields.io/github/license/CuteLeaf/Firefly)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/CuteLeaf/Firefly)
+[![Afdian Sponsor](https://img.shields.io/badge/Afdian-Sponsor%20Author-ff69b4.svg)](https://ifdian.net/a/cuteleaf)
 </div>
 
-A Hakurei Reimu style Hugo theme. Migrated from [hexo-theme-reimu](https://github.com/D-Sketon/hexo-theme-reimu).
 
 ---
+📖 README:
+**[简体中文](README.md)** | **[繁體中文](docs/README.zh-TW.md)** | **[English](README.en.md)** | **[日本語](docs/README.ja.md)** | **[한국어](docs/README.ko.md)**
 
-|framework|repository|version|stars|
-|-|-|-|-|
-|[Hexo](https://hexo.io/)|[hexo-theme-reimu](https://github.com/D-Sketon/hexo-theme-reimu)|<img alt="version" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2FD-Sketon%2Fhexo-theme-reimu%2Fraw%2Fmain%2Fpackage.json&query=%24.version&label=version">|<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/D-Sketon/hexo-theme-reimu">|
-|[Astro](https://astro.build)|[astro-theme-reimu](https://github.com/D-Sketon/astro-theme-reimu)|<img alt="version" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2FD-Sketon%2Fastro-theme-reimu%2Fraw%2Fmain%2Fpackage.json&query=%24.version&label=version">|<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/D-Sketon/astro-theme-reimu">|
-|[Hugo](https://gohugo.io)|[hugo-theme-reimu](https://github.com/D-Sketon/hugo-theme-reimu)|<img alt="version" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2FD-Sketon%2Fhugo-theme-reimu%2Fraw%2Fmain%2Fpackage.json&query=%24.version&label=version">|<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/D-Sketon/hugo-theme-reimu">|
+🚀 Quick Guide:
+[**🖥️Live Demo**](https://firefly.cuteleaf.cn/) /
+[**📝Documentation**](https://docs-firefly.cuteleaf.cn/) /
+[**🍀My Blog**](https://blog.cuteleaf.cn)
 
-**ISSUE and PR Welcome!**
+⚡ Static Site Generation: Ultra-fast loading speed and SEO optimization based on Astro
 
-## Features
+🎨 Modern Design: Clean and beautiful interface with customizable theme colors
 
-### Basic Functions
-- ✨ Full blog functionality
-- 🔄 Compatible with Hugo 0.116.0+
-- 📱 Responsive layout
-- 🌙 Dark mode support
+📱 Mobile-Friendly: Perfect responsive experience with mobile-specific optimizations
 
-### Code & Math
-- 🖥️ Code highlighting and copying
-- ➗ KaTeX / MathJax3 math formula support
-- 📊 Mermaid flowchart support
+🔧 Highly Configurable: Most features can be customized through configuration files
 
-### Search & Comments
-- 🔍 Algolia search integration
-- 💬 Multiple comment systems support:
-  - Valine
-  - Waline
-  - Twikoo
-  - Gitalk
-  - Giscus
+<table width="100%" align="center">
+  <tr>
+    <td colspan="3" align="center">
+      <img src="./docs/images/1.webp" >
+      <br>Banner Mode</td>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><img src="./docs/images/3.webp" width="300"><br>Overlay Mode</td>
+    <td align="center"><img src="./docs/images/2.webp" width="300"><br>Fullscreen Wallpaper Mode</td>
+    <td align="center"><img src="./docs/images/4.webp" width="300"><br>Solid Color Mode</td>
+  </tr>
+</table>
+<img alt="Lighthouse" src="./docs/images/Lighthouse.png" />
 
-### Statistics & Analytics
-- 📊 Article reading statistics (Valine / Waline)
-- 👥 Visitor statistics (Busuanzi)
+>[!TIP]
+>
+>Firefly is a fresh, beautiful, and modern personal blog theme template based on the Astro framework and the Fuwari template, designed for tech enthusiasts and content creators. It integrates a modern web tech stack, offering rich feature modules and a highly customizable interface so you can easily build a professional and visually appealing personal blog.
+>
+>**If you refer to or use Firefly component design and related code, please credit Firefly.**
+>
+>Firefly also preserves the original fuwari layout, which can be freely switched in the configuration file according to your preferences.
+>
+>**For more layout configurations and demos, please see: [Firefly Layout System Details](https://firefly.cuteleaf.cn/posts/guide/firefly-layout-system/)**
+>
+>Firefly supports i18n multilingual UI, but except for Simplified Chinese, other languages are AI-translated. If you find any errors, feel free to submit a [Pull Request](https://github.com/CuteLeaf/Firefly/pulls) to help improve them.
 
-### Media & Interactive Features
-- 🎵 Music player support:
-  - Aplayer
-  - Meting
-- 🖼️ Lazy loading for images
-- ⚡ Loading animations
-- 🖱️ Mouse effects:
-  - Animation effects
-  - Reimu cursor style
-- 👾 Live2D / Live2D-widgets integration
+## ✨ Features
 
-### Navigation & Structure
-- 📑 Table of Contents (TOC)
-- 🔄 PJAX support
-- 🔧 ServiceWorker implementation
-- 📰 RSS feed
+### Core Features
 
-### Design & Customization
-- 🎨 Icon support:
-  - Iconfont
-  - FontAwesome
-- 🔗 Custom shortcodes for:
-  - Internal links
-  - External links
-  - Friend links
-- ©️ Article copyright declaration
-- 🌐 Custom CDN source configuration
-- 🎨 Share card functionality
+- [x] **Astro + Tailwind CSS** - Ultra-fast static site generation based on modern tech stack
+- [x] **Smooth Animations** - Swup page transition animations for silky smooth browsing experience
+- [x] **Responsive Design** - Perfect adaptation for desktop, tablet and mobile devices
+- [x] **Multi-language Support** - i18n internationalization ui, supports Simplified Chinese, Traditional Chinese, English, Japanese, Russian, Korean
+- [x] **Full-text Search** - Client-side search based on Pagefind, supports article content indexing.
 
-## Installation
+### Personalization
+- [x] **Dynamic Sidebar** - Supports single sidebar, dual sidebar configuration
+- [x] **Article Layout** - Supports list (single column) and grid (multi-column/masonry) layout
+- [x] **Font Management** - Custom font support with rich font selector
+- [x] **Footer Configuration** - HTML content injection, fully customizable
+- [x] **Light/Dark Mode** - Supports light/dark/system three modes
+- [x] **Navbar Customization** - Logo, title, links fully customizable
+- [x] **Wallpaper Mode Switching** - Banner wallpaper, fullscreen wallpaper, fullscreen transparent wallpaper, solid background
+- [x] **Theme Color Customization** - 360° hue adjustment
+
+
+If you have useful features and optimizations, please submit a [Pull Request](https://github.com/CuteLeaf/Firefly/pulls)
+
+## 🚀 Quick Start
+
+### Requirements
+
+- Node.js ≥ 22
+- pnpm ≥ 11
+
+### Local Development
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Cuteleaf/Firefly.git
+   cd Firefly
+   ```
+   
+   **First [Fork](https://github.com/CuteLeaf/Firefly/fork) to your own repository then clone (recommended). Don't forget to Star before Fork!**
+
+   ```bash
+   git clone https://github.com/you-github-name/Firefly.git
+   cd Firefly
+   ```
+3. **Install dependencies:**
+   ```bash
+   # Install pnpm if not installed
+   npm install -g pnpm
+   
+   # Install project dependencies
+   pnpm install
+   ```
+
+4. **Configure blog:**
+   - Edit configuration files in `src/config/` directory to customize blog settings
+
+5. **Start development server:**
+   ```bash
+   pnpm dev
+   ```
+   Blog will be available at `http://localhost:4321`
+
+### Platform Hosting Deployment
+- **Refer to the [official guide](https://docs.astro.build/en/guides/deploy/) to deploy your blog to Vercel, Netlify, Cloudflare Pages, EdgeOne Pages, etc.**
+- **Vercel**, **Netlify** and other major platforms auto-deploy, automatically selecting the appropriate adapter based on the environment.
+
+   Framework Preset: `Astro`
+
+   Root Directory: `./`
+
+   Output Directory: `dist`
+
+   Build Command: `pnpm run build`
+
+   Install Command: `pnpm install`
+
+   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/CuteLeaf/Firefly&project-name=Firefly&repository-name=Firefly)
+   [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/CuteLeaf/Firefly)
+
+## 📖 Configuration
+
+> 📚 **Detailed Configuration Documentation**: Check [Firefly Documentation](https://docs-firefly.cuteleaf.cn/) for complete configuration guide
+
+### Setting Website Language
+
+To set the default language for your blog, edit the `src/config/siteConfig.ts` file:
+
+```typescript
+// Define site language
+const SITE_LANG = "zh_CN";
+```
+
+**Supported language codes:**
+- `zh_CN` - Simplified Chinese
+- `zh_TW` - Traditional Chinese
+- `en` - English
+- `ja` - Japanese
+- `ru` - Russian
+- `ko` - Korean
+
+### Configuration File Structure
+
+```
+src/
+├── config/
+│   ├── index.ts                  # Configuration index file
+│   ├── siteConfig.ts             # Site basic configuration
+│   ├── analyticsConfig.ts        # Analytics configuration
+│   ├── announcementConfig.ts     # Announcement configuration
+│   ├── backgroundWallpaper.ts    # Background wallpaper configuration
+│   ├── commentConfig.ts          # Comment system configuration
+│   ├── coverImageConfig.ts       # Cover image configuration
+│   ├── displaySettingsConfig.ts  # Settings panel configuration
+│   ├── dynamicConfig.ts          # Moments page configuration
+│   ├── effectsConfig.ts          # Animation effects config (sakura, etc.)
+│   ├── expressiveCodeConfig.ts   # Code highlighting configuration
+│   ├── fontConfig.ts             # Font configuration
+│   ├── FooterConfig.html           # Footer configuration
+│   ├── friendsConfig.ts          # Friend links configuration
+│   ├── galleryConfig.ts          # Gallery configuration
+│   ├── licenseConfig.ts          # License configuration
+│   ├── musicConfig.ts            # Music player configuration
+│   ├── navBarConfig.ts           # Navbar configuration
+│   ├── pioConfig.ts              # Mascot configuration
+│   ├── mermaidConfig.ts          # Mermaid diagram configuration
+│   ├── plantumlConfig.ts         # PlantUML diagram configuration
+│   ├── profileConfig.ts          # User profile configuration
+│   ├── sidebarConfig.ts          # Sidebar layout configuration
+│   └── sponsorConfig.ts          # Sponsor configuration
+```
+
+
+## ⚙️ Article Frontmatter
+
+```yaml
+---
+title: My First Blog Post
+published: 2023-09-09
+description: This is the first post of my new Astro blog.
+image: ./cover.jpg  # Or use "api" to enable random cover images
+tags: [Foo, Bar]
+category: Front-end
+draft: false
+lang: zh-CN      # Only set when article language differs from site language in `siteConfig.ts`
+pinned: false    # Pin article
+comment: true    # Enable comments
+---
+```
+
+## Moments
+
+Moment files are stored in `src/content/dynamic/`, with one Markdown file per moment. Create one with:
 
 ```bash
-cd themes
-git clone --single-branch --branch main https://github.com/D-Sketon/hugo-theme-reimu.git
+pnpm new-d The weather is lovely today
 ```
 
-And modify the theme in `hugo.toml`
-
-```toml
-theme = 'hugo-theme-reimu'
-```
-
-## Usage
-
-<details>
-<summary>Create Configuration</summary>
-
-### Creating Configuration
-
-#### Theme Configuration
-
-Create a `_default` folder under the outer `config` folder, then copy the `config/_default/params.yml` from inside the theme to the `_default` folder. This file serves as the theme configuration file where you can modify theme settings.
-
-#### Data Configuration
-
-Copy all files from the theme's `config/data/` folder to the outer `data` folder. The files in this folder are used to configure data within the theme:
-
-- `covers.yml` is used to configure random cover images
-- `friends.yml` is used to configure friend links
-- `vendor.yml` is used to configure CDN sources for third-party libraries
-
-#### Static Resource Configuration
-
-The theme's static resources (favicon, header images, etc.) are located in the `static` folder. You can create corresponding folders in the outer `static` folder and copy the files from inside the theme to the outer folders to override the theme's default files.
-
-> In summary, it's not recommended to modify files directly inside the theme. Instead, create corresponding folders in the outer directory and copy the theme's files there to override the default files. This approach makes theme upgrades easier.
-
-</details>
-<details>
-
-<summary>Basic Structure</summary>
-
-### Basic Structure
-
-To ensure proper display, please create `archives` and `post` folders in `content` by referring to `_example` (the `_index.md` inside cannot be omitted, and note that `post`'s `draft` should be set to `true`)
-
-#### archives
-
-- `_index.md` is used to display the archive page, cannot be omitted
-
-#### post
-
-Create articles in this directory, note that articles with `draft` set to `true` will not be displayed on the homepage
-
-- `_index.md` is used to prevent the generation of `post/index.html`, cannot be omitted
-
-#### about\.md
-
-About page
-
-#### friend\.md
-
-Friend link page
-
-</details>
-
-<details>
-<summary>Avatar, Cover, Banner, and favicon</summary>
-
-### Avatar, Cover, Banner, and Favicon
-
-#### Avatar
-
-The avatar should be saved at `static/avatar/avatar.webp`. You can modify the filename in `params.yml`
-
-```yaml
-avatar: "avatar.webp"
-```
-
-#### Cover
-
-For random cover images, refer to the file structure in the theme's `data/covers.yml`. Create a `covers.yml` file in the outer `data` folder with the following format:
-
-```yaml
-- https://example.com/1.jpg
-- https://example.com/2.jpg
-```
-
-Cover display logic is as follows:
-
-- If the article's Front matter contains a cover url, both the article header and homepage thumbnail will display that url
+`pnpm new-dynamic <content>` is the equivalent full command.
 
 ```yaml
 ---
-title: Hello World
-cover: https://example.com
+published: 2026-07-15 16:15:29
+pinned: true  # Pin article
+location: China # Location
 ---
+
+Moment content supports Markdown.
 ```
 
-- If the article's Front matter contains cover set to `false`, the article won't display a header image (homepage will still show random images)
+Also supports [Memos](https://www.usememos.com/) as a data source. Configure the `memos` option in `src/config/dynamicConfig.ts` to fetch Memos moments in real-time, with pinned sync and image attachment support. See [Moments documentation](https://docs-firefly.cuteleaf.cn/en/guide/dynamic.html).
 
-```yaml
----
-title: Hello World
-cover: false
----
-```
+## 📖 Markdown Extensions
 
-- If the article's Front matter contains cover set to `rgb(xxx,xxx,xxx)`, the article header will be a gradient of that solid color (homepage will still show random images)
+In addition to the default [GitHub Flavored Markdown](https://github.github.com/gfm/) support in Astro, there are some additional Markdown features:
 
+- Admonitions - Supports configuration for GitHub, Obsidian, VitePress, and Docusaurus themes ([Preview and Usage](https://firefly.cuteleaf.cn/posts/markdown-extended/))
+- GitHub Repository Cards ([Preview and Usage](https://firefly.cuteleaf.cn/posts/markdown-extended/))
+- Enhanced Code Blocks based on Expressive Code ([Preview](http://firefly.cuteleaf.cn/posts/code-examples/) / [Documentation](https://expressive-code.com/))
 
-```yaml
----
-title: Hello World
-cover: rgb(255,117,117)
----
-```
+## 🧞 Commands
 
-- Otherwise, it will look for `covers.yml` in the `data` folder and randomly select an image
-- If none of the above files exist, it will display the banner image
+All commands need to be executed in the project root directory:
 
-#### Banner
+| Command                    | Action                                              |
+|:---------------------------|:----------------------------------------------------|
+| `pnpm install`             | Install dependencies                                |
+| `pnpm dev`                 | Start local development server at `localhost:4321`  |
+| `pnpm build`               | Build site to `./dist/`                             |
+| `pnpm preview`             | Preview built site locally                          |
+| `pnpm check`               | Check for errors in code                            |
+| `pnpm format`              | Format your code using Biome                        |
+| `pnpm new-post <filename>` | Create new article                                  |
+| `pnpm new-d <content>`     | Create a new moment                                 |
+| `pnpm new-dynamic <content>` | Create a new moment (full command)                |
+| `pnpm astro ...`           | Execute `astro add`, `astro check` and other commands |
+| `pnpm astro --help`        | Display Astro CLI help                              |
 
-The banner is saved at `themes/hugo-theme-reimu/static/images/banner.webp`. You can modify the path and name in `params.yml`
+## 🙏 Acknowledgments
 
-```yaml
-banner: "images/banner.webp"
-```
+Special thanks to [saicaca](https://github.com/saicaca) for developing the [fuwari](https://github.com/saicaca/fuwari) template, which Firefly is based on for secondary development.
 
-#### Favicon
+The copyright of Firefly-related image assets belongs to [miHoYo](https://www.mihoyo.com/), the developer of the game ["Honkai: Star Rail"](https://sr.mihoyo.com/).
 
-The favicon is saved at `themes/hugo-theme-reimu/static/favicon.ico`. You can replace it with your own file.
+### Tech Stack
 
-</details>
-<details>
-<summary>Code Blocks</summary>
+- [Astro](https://astro.build) 
+- [Tailwind CSS](https://tailwindcss.com) 
+- [Iconify](https://iconify.design)
 
-### Code Blocks
+### Inspiration Projects
 
-To ensure proper display of code blocks, make sure you have the following configuration in `hugo.toml`
+- [fuwari](https://github.com/saicaca/fuwari)
+- [hexo-theme-shoka](https://github.com/amehime/hexo-theme-shoka)
+- [astro-koharu](https://github.com/cosZone/astro-koharu)
+- [Mizuki](https://github.com/matsuzaka-yuki/Mizuki)
 
-```toml
-[markup.highlight]
-guessSyntax = true
-noClasses = false
-```
+### Other References
+- Blogger `霞葉` [Bangumi Collection](https://kasuha.com/posts/fuwari-enhance-ep2/) page component
+- Bilibili creator `公公的日常` Q-version [Firefly Mascot Spine Model](https://www.bilibili.com/video/BV1fuVzzdE5y)
 
-Code blocks also provide code copying functionality. Click the copy button in the top right corner of the code block to copy the code. You can configure the copy functionality in `params.yml`.  
-`success` is the prompt shown when copying is successful, `fail` is the prompt shown when copying fails. Additionally, you can configure copyright notices - when the copied text exceeds `count` characters, the `content` copyright notice will be added after the copied content.
+## 📝 License
 
-```yaml
-clipboard:
-  success: 复制成功(*^▽^*)
-  fail: 复制失败 (ﾟ⊿ﾟ)ﾂ
-  copyright:
-    enable: false
-    count: 50 # The number of characters when the copyright is displayed
-    content: 本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！
-```
+This project is licensed under the [MIT license](https://mit-license.org/). See the [LICENSE](./LICENSE) file for details.
 
-v0.2.0 added configuration to control the default expansion state of code blocks. `expand` can be set to `true`, `false`, or a number - the number indicates that code blocks will be collapsed by default when the number of lines exceeds this value.
+Originally forked from [saicaca/fuwari](https://github.com/saicaca/fuwari). Thanks to the original author for their contributions. 
 
-```yaml
-code_block:
-  expand: true # true | false | number
-```
+**Copyright Notice:**
+- Copyright (c) 2024 [saicaca](https://github.com/saicaca) - [fuwari](https://github.com/saicaca/fuwari)
+- Copyright (c) 2025 [CuteLeaf](https://github.com/CuteLeaf) - [Firefly](https://github.com/CuteLeaf/Firefly)
 
-</details>
-<details>
-<summary>Site comments</summary>
+Under the MIT license, you are free to use, modify, and distribute the code, but you must retain the above copyright notice.
 
-### Site comments
+## 🍀 Contributors
 
-> Site comments can be individually controlled for each article using `comments` in the Front matter.  
-> When `comments` is `false`, comments won't be displayed. When it's `true` or not specified, the display will be determined by the `params.yml` configuration.
+Thanks to the following contributors for their contributions to this project. If you have any questions or suggestions, please submit an [Issue](https://github.com/CuteLeaf/Firefly/issues) or [Pull Request](https://github.com/CuteLeaf/Firefly/pulls).
 
-If using [Valine](https://valine.js.org/)  
-Please refer to their official documentation to complete the `LeanCloud` configuration, then set `valine.enable` to `true` in the inner `params.yml` and fill in your `appId` and `appKey`
+><a href="https://github.com/CuteLeaf/Firefly/graphs/contributors">
+>  <img src="https://contrib.rocks/image?repo=CuteLeaf/Firefly" />
+></a>
 
-```yaml
-valine:
-  enable: true
-  appId: "your appId"
-  appKey: "your appKey"
-```
+Thanks to the following contributors for their contributions to the original project [fuwari](https://github.com/saicaca/fuwari), which laid the foundation for this project.
 
-If using [Waline](https://waline.js.org/)  
-Please refer to their [official documentation](https://waline.js.org/guide/get-started/) to complete the `LeanCloud` configuration, then set `waline.enable` to `true` in the inner `params.yml` and fill in your `serverURL`
+><a href="https://github.com/saicaca/fuwari/graphs/contributors">
+>  <img src="https://contrib.rocks/image?repo=saicaca/fuwari" />
+></a>
 
-```yaml
-waline:
-  enable: true
-  serverURL: "your server url"
-  lang: zh-CN
-  locale: {} # https://waline.js.org/guide/features/i18n.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AF%AD%E8%A8%80
-  emoji:
-    - https://unpkg.com/@waline/emojis@1.2.0/weibo
-    - https://unpkg.com/@waline/emojis@1.2.0/alus
-    - https://unpkg.com/@waline/emojis@1.2.0/bilibili
-    - https://unpkg.com/@waline/emojis@1.2.0/qq
-    - https://unpkg.com/@waline/emojis@1.2.0/tieba
-    - https://unpkg.com/@waline/emojis@1.2.0/tw-emoji
-  meta:
-    - nick
-    - mail
-    - link
-  requiredMeta:
-    - nick
-    - mail
-  wordLimit: 0
-  pageSize: 10
-  pageview: true
-```
+## ⭐ Star History
 
-If using [twikoo](https://twikoo.js.org)  
-Please refer to their [official documentation](https://twikoo.js.org/quick-start.html) to complete Tencent Cloud or Vercel deployment, then set `twikoo.enable` to `true` in the inner `params.yml` and fill in your `envId`
+[![Star History Chart](https://api.star-history.com/svg?repos=CuteLeaf/Firefly&type=Date)](https://star-history.com/#CuteLeaf/Firefly&Date)
 
-```yml
-twikoo:
-  enable: true
-  envId: # Tencent cloud environment fill envId; Vercel environment fill address (https://xxx.vercel.app)
-  region:
-```
 
-If using [giscus](https://giscus.app/)  
-Please refer to the documentation to complete repository configuration, then set `giscus.enable` to `true` in the inner `params.yml` and fill in the corresponding data
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
 
-```yml
-giscus:
-  enable: true
-  repo: "your repo"
-  repoId: "your repoId"
-  category: "your category"
-  categoryId: "your categoryId"
-  mapping: mapping
-  strict: 0
-  reactionsEnabled: 1
-  emitMetadata: 0
-  inputPosition: bottom
-  # commentTheme: preferred_color_scheme invalid
-  lang: zh-CN
-```
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
 
-If using [gitalk](https://gitalk.github.io/)  
-Please refer to their [official documentation](https://github.com/gitalk/gitalk?tab=readme-ov-file#usage) to complete repository configuration, then set `gitalk.enable` to `true` in the inner `params.yml` and fill in the corresponding data
-
-```yml
-gitalk:
-  enable: true
-  clientID: "your application client ID"
-  clientSecret: "your application client secret"
-  repo: "your repo"
-  owner: "repo owner"
-  admin: "repo owner and collaborators"
-  md5: false # Whether to use md5 to encrypt the path
-```
-
-</details>
-<details>
-<summary>Site search</summary>
-
-Based on [Algolia](https://www.algolia.com/), please add the following configuration to your outer `hugo.toml`:
-
-```toml
-[outputs]
-home = ["Algolia", "HTML", "RSS"]
-
-[outputFormats.Algolia]
-baseName = "algolia"
-isPlainText = true
-mediaType = "application/json"
-notAlternative = true
-```
-
-This will generate an `algolia.json` file in the `public` folder, which is used for Algolia search. You can then use plugins like `atomic-algolia` to upload it to Algolia.
-
-Also, in `params.yml`, set `algolia_search.enable` to `true` and fill in the relevant information (**Important! Enter the Search-Only Key here, NOT the Admin Key!! Otherwise, your account may be vulnerable to attacks**)
-
-```yaml
-algolia_search:
-  enable: true
-```
-
-</details>
-<details>
-
-<summary>Mathematical formulas</summary>
-
-### Mathematical formulas
-
-First, add the following configuration to your outer `hugo.toml`:
-
-```toml
-[markup.goldmark.extensions.passthrough]
-enable = true
-delimiters.block = [["\\[", "\\]"], ["$$", "$$"]]
-delimiters.inline = [["\\(", "\\)"], ["$", "$"]]
-```
-
-Then, add `math: true` to the Front matter of any article where you want to use mathematical formulas:
-
-```yaml
----
-math: true
----
-```
-
-> Note: Do not enable both KaTeX and MathJax3 simultaneously
-
-#### KaTex
-
-If using [KaTeX](https://github.com/KaTeX/KaTeX), set `math.katex.enable` to `true` in `params.yml`:
-
-```yaml
-math:
-  katex:
-    enable: true
-```
-
-#### MathJax3
-
-If using [MathJax3](https://www.mathjax.org/), set `math.mathjax.enable` to `true` in `params.yml`. You can add configurations in `options` (since Hugo automatically converts object keys to lowercase, configurations need to be placed in an array to avoid default behavior):
-
-```yaml
-math:
-  mathjax:
-    enable: true
-    options: [{}]
-```
-
-</details>
-<details>
-<summary>Mermaid</summary>
-
-### Mermaid
-
-Flow charts are based on [Mermaid](https://mermaid.js.org/#/). Add `mermaid: true` to the Front matter of articles where you want to use flow charts:
-
-```yaml
----
-mermaid: true
----
-```
-
-</details>
-<details>
-<summary>RSS</summary>
-
-### RSS
-
-RSS is built-in, no additional configuration needed.
-
-</details>
-
-<details>
-<summary>Icon</summary>
-
-### Icon
-
-Icons default to using the iconfont provided by this project:
-
-```yml
-icon_font: 4552607_0khxww3tj3q9
-```
-
-If you want to continue using FontAwesome icons, set `icon_font` to `false`. This will use the corresponding FontAwesome configuration from `vendor.yml`:
-
-```yml
-fontawesome:
-  high_priority:
-    - webcache|@fortawesome/fontawesome-free@6.5.1/css/regular.min.css
-    - webcache|@fortawesome/fontawesome-free@6.5.1/css/solid.min.css
-  low_priority:
-    - webcache|@fortawesome/fontawesome-free@6.5.1/css/brands.min.css
-    - webcache|@fortawesome/fontawesome-free@6.5.1/css/v5-font-face.min.css
-    - webcache|@fortawesome/fontawesome-free@6.5.1/css/v4-font-face.min.css
-```
-
-</details>
-
-<details>
-<summary>Extended features</summary>
-
-### Extended features
-
-#### Dark Mode
-
-The default setting is `auto`, which automatically switches based on the user's system settings. It can be set to `true` or `false` to change the default state.
-
-```yaml
-dark_mode:
-  # true means that the dark mode is enabled by default
-  # false means that the dark mode is disabled by default
-  # auto means that the dark mode is automatically switched according to the system settings
-  enable: auto # true | false | auto
-```
-
-#### Pace Progress Bar
-
-Enabled by default
-
-```yaml
-pace:
-  enable: true
-```
-
-#### Firework
-
-Enabled by default
-
-```yaml
-firework:
-  enable: true
-```
-
-For detailed configuration, please check [mouse-firework](https://github.com/D-Sketon/mouse-firework)
-
-#### PJAX
-
-Disabled by default
-
-```yaml
-pjax:
-  enable: false
-```
-
-> PJAX is for users who need SPA features like music players. However, it's still experimental and may cause issues like **scripts not executing**, **scripts executing multiple times**, or **page rendering problems**. Please consider carefully!
-
-#### ServiceWorker
-
-Disabled by default
-
-```yaml
-service_worker:
-  enable: false
-```
-
-#### Live2D
-
-Disabled by default
-
-```yaml
-live2d:
-  enable: false
-  position: left # left | right
-```
-
-#### Live2D Widgets
-
-Disabled by default
-
-```yaml
-live2d_widgets:
-  enable: false
-  position: left # left | right
-```
-
-#### Reimu Cursor
-
-Enabled by default
-
-```yml
-reimu_cursor: true
-```
-
-#### Responsive Banner
-
-Disabled by default. When enabled and provided with corresponding image sizes and media queries, it can improve mobile LCP to some extent
-
-```yml
-banner_srcset:
-enable: false
-srcset:
-  - src: "images/banner-600w.webp"
-    media: "(max-width: 479px)"
-  - src: "images/banner-800w.webp"
-    media: "(max-width: 799px)"
-  - src: "images/banner.webp"
-    media: "(min-width: 800px)"
-```
-
-#### Article Copyright Notice
-
-Disabled by default
-
-```yml
-article_copyright:
-  enable: false # Show copyright card?
-  content:
-    author: # true | false Show author in copyright card?
-    link: # true | false Show link in copyright card?
-    title: # true | false Show title in copyright card?
-    date: # true | false Show creation date in copyright card?
-    updated: # true | false Show update date in copyright card?
-    license: # true | false Show license in copyright card?
-```
-
-Additionally, it can be controlled through article front-matter, which takes priority over global configuration
-
-```yaml
----
-copyright: true # Show copyright card?
----
-```
-
-#### Quicklink
-
-Enabled by default. When enabled, it preloads links while users stay on the page, improving user experience
-
-```yaml
-quicklink:
-  enable: true
-  timeout: 3000 # Timeout for quicklink
-  priority: true # Whether to prioritize loading the page
-  ignores: [] # Ignore the specified link, only support string
-```
-
-#### Outdated Notice
-
-Disabled by default
-
-```yaml
-outdate:
-  enable: false
-  daysAgo: 180 # How many days old before an article is considered outdated
-  message: 本文最后更新于 {time}，请注意文中内容可能已经发生变化。
-```
-
-#### Sponsorship
-
-Disabled by default
-
-```yaml
-sponsor:
-  enable: false # Show sponsorship QR codes?
-  tip: Buy the author a coffee! # Sponsorship tip
-  icon:
-    url: "../images/taichi.png" # Sponsor icon path relative to css/main.css
-    rotate: true # Rotate icon?
-    mask: true # Use image as mask (only show PNG image outline)?
-  qr:
-    - name: Alipay # QR code name
-      src: "sponsor/alipay.jpg" # Example QR code path at static/sponsor/alipay.jpg
-```
-
-Can also be controlled through article front-matter, which takes priority over global configuration
-
-```yaml
----
-sponsor: true # Show sponsorship QR codes?
----
-```
-
-#### Music Player (v0.4.0+)
-
-> Recommended to enable PJAX first, otherwise the player may automatically pause
-
-Uses Aplayer + Meting (optional), disabled by default
-
-##### Pure Aplayer
-
-Set `player.aplayer.enable` to `true` and configure `player.aplayer.options` according to [Aplayer Docs](https://aplayer.js.org/#/home?id=options)
-
-```yaml
-player:
-  aplayer:
-    enable: true
-    options:
-      audio: [] # audio list
-      fixed:
-      autoplay:
-      loop:
-      order:
-      preload: 
-      volume:
-      mutex:
-      listFolded:
-      lrcType:
-```
-
-##### Aplayer + Meting
-
-Set both `player.aplayer.enable` and `player.meting.enable` to `true`. Configure `player.meting.options` according to [Meting Docs](https://github.com/metowolf/MetingJS?tab=readme-ov-file#option) and `player.aplayer.options` for Aplayer configuration
-
-```yaml
-player:
-  aplayer:
-    enable: true
-    options:
-      audio: [] # this option will be overwritten by meting
-      fixed:
-      autoplay:
-      loop:
-      order:
-      preload: 
-      volume:
-      mutex:
-      listFolded:
-      lrcType:
-  meting:
-    enable: true
-    meting_api: # custom api
-    options:
-      id: 
-      server: 
-      type: 
-      auto:
-```
-
-#### Share Link / Card (v0.5.0+)
-
-Disabled by default, currently supports `facebook`, `twitter`, `linkedin`, `reddit`, `weibo`, `qq`, `weixin`.
-
-```yaml
-share:
-  # - facebook
-  # - twitter
-  # - linkedin
-  # - reddit
-  # - weibo
-  # - qq
-  # - weixin
-```
-
-For `weixin`, it generates a share card with QR code that can be saved locally and shared to WeChat Moments (Note: when the article cover has cross-origin issues, html-to-image cannot correctly generate cards with images!)
-
-#### Homepage Category Cards (v0.6.0+)
-
-Disabled by default. When enabled, it shows category cards on the homepage as an alternative to the widget categories
-
-```yml
-home_categories:
-  enable: false # Show homepage category cards?
-  content:
-    - categories: # Category name (string)
-      cover: # Card cover, uses random cover if not specified
-    - categories:
-      cover:
-```
-
-</details>
-
-
-<details>
-<summary>Built-in Card Shortcodes</summary>
-
-### Built-in Card Shortcodes
-
-#### friendLink Card
-
-```yaml
-{{< friendsLink >}}
-```
-
-No parameters, directly reads from the `data/friends.yml` file
-
-#### postLinkCard - Internal Link Card
-
-```yaml
-{{<postLinkCard path="?" cover="?" escape="?" >}}
-```
-
-The first parameter is the article's `path`; the second parameter (optional) is the cover image shown on the card - if set to `auto`, it will automatically use the blog's `banner`; the third parameter (optional, `true | false`) indicates whether the article title should be escaped
-
-#### externalLinkCard - External Link Card
-
-```yaml
-{{<externalLinkCard title="?" link="?" cover="?">}}
-```
-
-The first parameter is the article's title; the second parameter is the external link to the article; the third parameter (optional) is the cover image shown on the card - if set to `auto`, it will automatically use the default cover
-
-</details>
-
-<details>
-<summary>Customize theme</summary>
-
-#### Customizing Theme Colors
-
-hugo-theme-reimu supports customizing theme colors through CSS variables. You can customize your theme colors by modifying the CSS variables under the `:root` pseudo-class.
-
-The variables file is located at `assets/css/_variables.scss`. You can find all CSS variables there, but you only need to modify the variables under these pseudo-classes:
-
-```scss
-:root {
-  --red-0: hsl(0, 100%, 50%);
-  --red-1: hsl(0, 100%, 66%);
-  --red-2: hsl(0, 100%, 74%);
-  --red-3: hsl(0, 100%, 84%);
-  --red-4: hsl(0, 100%, 91%);
-  --red-5: hsl(0, 100%, 95%);
-  --red-5-5: hsl(0, 100%, 96%);
-  --red-6: hsl(0, 100%, 98%);
-
-  --color-red-6-shadow: hsla(0, 100%, 65%, 0.6);
-  --color-red-3-shadow: hsla(0, 100%, 65%, 0.3);
-}
-
-[data-theme="dark"] {
-  &:root {
-    --red-4: hsla(0, 100%, 91%, 0.5);
-    --red-5: hsla(0, 100%, 95%, 0.2);
-    --red-5-5: hsla(0, 100%, 96%, 0.1);
-    --red-6: hsla(0, 100%, 98%, 0.2);
-  }
-}
-```
-
-#### Customize theme font
-
-You can define Google Fonts through the following configuration:
-
-```yaml
-# https://fonts.google.com/
-font:
-  article:
-    - Mulish
-    - Noto Serif SC
-  code:
-    # - Ubuntu Mono
-    # - Source Code Pro
-    # - JetBrains Mono
-```
-
-v0.2.0 added `local_font` configuration for defining local fonts, which has lower priority than Google Fonts:
-
-```yaml
-local_font:
-  article:
-    - "-apple-system"
-    - PingFang SC
-    - Microsoft YaHei
-    - sans-serif
-  code:
-    - Menlo
-    - Monaco
-    - Consolas
-    - monospace
-```
-
-#### Customizing Icons
-
-##### Header / Sidebar Icons
-
-The `menu` configuration structure changed in v0.1.0, allowing users to customize icons. When icon is empty, it defaults to using the Taichi icon. You can fill in a hexadecimal number to customize the icon, supporting both FontAwesome and icon font.
-
-```yaml
-menu:
-  - name: home
-    url: /
-    icon: # Default Taichi icon when empty
-  - name: archives
-    url: /archives
-    icon: f0c1 # You can fill in a hexadecimal number to customize the icon
-  - name: about
-    url: /about
-    icon:
-  - name: friend
-    url: /friend
-    icon:
-```
-
-##### Footer / Back to Top / Sponsor Icons
-
-v0.1.0 added `icon` configuration to `footer`, `top`, and `sponsor` for customizing icons.
-
-- `url` is the icon path relative to `css/main.css`, so you need to go up one level to find the images folder.
-- `rotate` determines whether to rotate the icon, default is `true`.
-- `mask` determines whether to use the image as a mask (only showing PNG image outline), default is `true`.
-
-```yaml
-footer:
-  icon:
-    url: "../images/taichi.png" # Path relative to css/main.css
-    rotate: true
-    mask: true
-
-top:
-  icon:
-    url: "../images/taichi.png"
-    rotate: true
-    mask: true
-
-sponsor:
-  icon:
-    url: "../images/taichi.png"
-    rotate: true
-    mask: true
-```
-
-##### Loading Icon
-
-v0.1.0 added `icon` configuration to `preloader` for customizing the loading icon. When icon is empty, it defaults to using inline SVG (ensuring first-screen loading speed). You can enter a link to customize the loading icon.
-
-It's not recommended to use large icons to avoid affecting loading speed.
-
-```yaml
-preloader:
-  enable: true
-  text: 少女祈祷中...
-  icon: # Default uses inline SVG when empty, you can enter a link like '/images/taichi.png'
-```
-
-##### Anchor Icon
-
-v0.1.0 added `anchor_icon` configuration for customizing anchor icons. Default uses the `#` icon. You can fill in a hexadecimal number to customize the icon, supporting both FontAwesome and icon font.
-
-```yaml
-anchor_icon: # Default uses # icon when empty
-```
-
-##### Cursor Icon (v0.5.0+)
-
-v0.5.0 added `reimu_cursor.cursor` configuration for customizing the cursor icon. You can fill in a path relative to `css/main.css` to customize the cursor icon.
-
-```yaml
-reimu_cursor:
-  enable: true
-  cursor:
-    default: ../images/cursor/reimu-cursor-default.png
-    pointer: ../images/cursor/reimu-cursor-pointer.png
-    text: ../images/cursor/reimu-cursor-text.png
-```
-
-</details>
-
-<details>
-<summary>Vendor</summary>
-
-`vendor` is used to store third-party resources such as fontawesome, iconfont, katex, mathjax, etc.
-
-The `vendor` structure in hugo-theme-reimu is very flexible and supports the following formats:
-
-- `:cdn|:package@:version/:file`: Uses CDN acceleration, for example `cdn_jsdelivr_gh|katex@0.13.11/dist/katex.min.css`. The `:cdn` can be configured in `vendor`. Currently includes the following CDN sources:
-  ```yaml
-  cdn_jsdelivr_gh: https://cdn.jsdelivr.net/gh/ # GitHub acceleration only
-  cdn_jsdelivr_npm: https://cdn.jsdelivr.net/npm/ # NPM acceleration only
-  fastly_jsdelivr_gh: https://fastly.jsdelivr.net/gh/ # GitHub acceleration only
-  fastly_jsdelivr_npm: https://fastly.jsdelivr.net/npm/ # NPM acceleration only
-  unpkg: https://unpkg.com/ # NPM acceleration only
-  webcache: https://npm.webcache.cn/ # NPM acceleration only
-  ```
-  Users can switch CDN sources based on their network conditions.
-- Starting with `https://:path`: Uses absolute links directly, such as `https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css`
-- Starting with `:path`: Local resources. You can place resources in the `static` folder, then reference them using paths like `katex.min.css`
-
-Additionally, `vendor` supports SRI (Subresource Integrity) verification. You can use `SHA-384` in `vendor` to verify resource integrity, for example:
-
-```yaml
-js:
-  clipboard: # Using SRI verification
-    src: webcache|clipboard@2.0.11/dist/clipboard.min.js
-    integrity: sha384-J08i8An/QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q
-  lazysizes: webcache|lazysizes@5.3.2/lazysizes.min.js # Without SRI verification
-```
-
-Both formats are supported. It's recommended to use SRI verification for external CDN resources to ensure resource integrity.
-
-</details>
-
-## License
-
-MIT
+<!-- ALL-CONTRIBUTORS-LIST:END -->
