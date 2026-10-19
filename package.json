@@ -55,6 +55,7 @@
     "astro-expressive-code": "^0.44.2",
     "astro-icon": "^1.2.0",
     "ci-info": "^4.4.0",
+    "cursor-effects": "1.0.18",
     "dayjs": "^1.11.23",
     "ec-lang-logo": "^1.0.5",
     "expressive-code-collapsible": "^0.1.0",

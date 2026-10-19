@@ -27,6 +27,7 @@ GitHub，由 Actions 重新构建并发布。网页上的搜索、主题切换�
 | 首页项目列表 | src/pages/index.astro |
 | 双侧栏及组件 | src/config/sidebarConfig.ts |
 | 字体与横幅打字效果 | src/config/fontConfig.ts 与 src/config/backgroundWallpaper.ts |
+| 鼠标指针、星屑拖尾、飘落樱花 | src/config/effectsConfig.ts |
 | 公开项目动态 | src/content/dynamic/*.md |
 | 项目详情 | src/content/projects/*.md |
 | 关于我、联系方式占位 | src/content/spec/about.md |
@@ -38,6 +39,11 @@ GitHub，由 Actions 重新构建并发布。网页上的搜索、主题切换�
 笔记列表位于 /notes/。当前没有公开笔记，显示空状态。
 
 创建动态可运行 `pnpm new-dynamic "一条愿意公开的近况"`。
+
+鼠标与粒子试用：`cursorEffectsConfig.enable` 控制青绿指针，`trail` 控制星屑，
+`colors` 和 `opacity` 控制拖尾配色与浓度。星屑使用 [cursor-effects](https://github.com/tholman/cursor-effects)。
+`sakuraConfig.enable` 控制 Firefly 原生樱花，数量、尺寸、速度也在此文件调整。
+手机不启用鼠标特效，樱花降为最多 7 片；系统开启减少动态效果时关闭这两项粒子动画。
 
 ## 找到现有主页
 

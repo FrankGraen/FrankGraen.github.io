@@ -1,3 +1,10 @@
+export type CursorEffectsConfig = {
+	enable: boolean;
+	trail: boolean;
+	colors: string[];
+	opacity: number;
+};
+
 export type SakuraConfig = {
 	enable: boolean; // 是否启用樱花特效
 	sakuraNum: number; // 樱花数量，默认21

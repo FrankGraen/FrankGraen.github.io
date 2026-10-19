@@ -1,0 +1,71 @@
+---
+import { cursorEffectsConfig } from "@/config/effectsConfig";
+---
+
+<div id="cursor-effects" aria-hidden="true" hidden style={{ opacity: cursorEffectsConfig.opacity }}></div>
+
+<script>
+	import { fairyDustCursor, type CursorEffectResult } from "cursor-effects";
+	import { cursorEffectsConfig } from "@/config/effectsConfig";
+	import { url } from "@/utils/url-utils";
+
+	const host = document.getElementById("cursor-effects");
+	if (host && !host.dataset.initialized) {
+		host.dataset.initialized = "true";
+		const pointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+		const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+		let trail: CursorEffectResult | null = null;
+		const root = document.documentElement;
+		root.style.setProperty("--site-cursor-default", `url("${url("/assets/cursors/mint-arrow.svg")}") 4 3`);
+		root.style.setProperty("--site-cursor-pointer", `url("${url("/assets/cursors/mint-pointer.svg")}") 14 4`);
+
+		function syncEffects() {
+			if (!host) return;
+			root.classList.toggle("custom-cursor-enabled", cursorEffectsConfig.enable && pointer.matches);
+			host.hidden = !cursorEffectsConfig.trail || !pointer.matches || reducedMotion.matches || document.hidden;
+			if (!host.hidden && !trail) {
+				const options = { element: host, colors: cursorEffectsConfig.colors, fairySymbol: "\u2726" };
+				trail = fairyDustCursor(options);
+			}
+		}
+
+		// The persistent host survives Swup navigation; forward only desktop mouse movement.
+		document.addEventListener("mousemove", (event) => {
+			if (host.hidden || !trail) return;
+			host.dispatchEvent(new MouseEvent("mousemove", { clientX: event.clientX, clientY: event.clientY }));
+		}, { passive: true });
+		pointer.addEventListener("change", syncEffects);
+		reducedMotion.addEventListener("change", syncEffects);
+		document.addEventListener("visibilitychange", syncEffects);
+		syncEffects();
+	}
+</script>
+
+<style is:global>
+	#cursor-effects {
+		position: fixed;
+		inset: 0;
+		z-index: 1000;
+		pointer-events: none;
+		overflow: hidden;
+	}
+
+	@media (hover: hover) and (pointer: fine) {
+		html.custom-cursor-enabled,
+		html.custom-cursor-enabled body {
+			cursor: var(--site-cursor-default), auto;
+		}
+
+		html.custom-cursor-enabled :is(a, button, summary, [role="button"], label[for], input[type="checkbox"], input[type="radio"]) {
+			cursor: var(--site-cursor-pointer), pointer;
+		}
+
+		html.custom-cursor-enabled :is(textarea, [contenteditable="true"], input:not([type]), input[type="text"], input[type="search"], input[type="email"], input[type="password"], input[type="url"], input[type="tel"], input[type="number"]) {
+			cursor: text;
+		}
+
+		html.custom-cursor-enabled :is(:disabled, [aria-disabled="true"]) {
+			cursor: not-allowed;
+		}
+	}
+</style>
