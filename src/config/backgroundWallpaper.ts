@@ -13,7 +13,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			enable: true,
 			title: "FrankGraen",
 			titleSize: "4.5rem",
-			subtitle: ["Robotics & Embodied Intelligence", "Learning World Models", "Exploring Reinforcement Learning"],
+			subtitle: ["World Action Model (WAM)", "Learning Models for Action", "Robotics & Embodied Intelligence"],
 			subtitleSize: "1.5rem",
 			typewriter: {
 				enable: true,

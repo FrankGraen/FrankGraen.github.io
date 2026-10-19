@@ -43,39 +43,42 @@ GitHub，由 Actions 重新构建并发布。网页上的搜索、主题切换�
 
 截至 2026-10-19，已核实的公开部署记录：
 
-- 网站仓库：https://github.com/FrankGraen/frankg.github.io
-- 已部署地址：https://frankgraen.github.io/frankg.github.io/
-- Pages 设置：https://github.com/FrankGraen/frankg.github.io/settings/pages
+- 网站仓库：https://github.com/FrankGraen/FrankGraen.github.io
+- 已部署地址：https://frankgraen.github.io/
+- Pages 设置：https://github.com/FrankGraen/FrankGraen.github.io/settings/pages
 
-在 GitHub 左侧仓库列表点击 `FrankGraen/frankg.github.io`，进入仓库后点击顶部
+在 GitHub 左侧仓库列表点击 `FrankGraen/FrankGraen.github.io`，进入仓库后点击顶部
 `Settings`，在设置页左侧 `Code and automation` 分组点击 `Pages`。
 发布成功时，上方会显示 `Your site is live at...` 和 `Visit site`。
 仓库首页右侧的 `Deployments` / `github-pages` 也可查看部署地址。
 
 `FrankGraen/FrankGraen` 是 GitHub 个人资料 README 仓库；它与网站仓库不同。
-网站使用现有仓库发布，地址含 `/frankg.github.io/`。对应的 `siteBase` 位于
-`src/config/siteConfig.ts`，已用于 Astro、导航、资源和搜索；`site_url` 保持为
-`https://frankgraen.github.io`。修改仓库名或域名时需要同时检查这两个配置。
+网站仓库已由 `frankg.github.io` 改名为 `FrankGraen.github.io`，按 GitHub 用户站点
+规则发布在根域名。`src/config/siteConfig.ts` 中的 `siteBase` 为 `/`，
+`site_url` 为 `https://frankgraen.github.io`，供 Astro、导航、资源和搜索共同使用。
+动态页为 `https://frankgraen.github.io/dynamic/`；主页为根网址。
+在 `https://github.com/FrankGraen` 可查看个人资料 README，点击其中的个人网站入口即可进入本站。
 
 ## 发布到 GitHub Pages
 
-1. 打开 **https://github.com/FrankGraen/frankg.github.io**。
+1. 打开 **https://github.com/FrankGraen/FrankGraen.github.io**。
 2. 在 **Settings > Pages > Build and deployment > Source** 选择 **GitHub Actions**。
 3. 在本地编辑本站内容，通过 GitHub Desktop 或 Git 提交并推送到该仓库的 `main` 分支。
    只提交本站文件夹内容，不提交父目录的简历、论文源文件和内部资料。
 4. 打开仓库 **Actions > Deploy to GitHub Pages**，查看最新一次运行。
-5. 等待 `build` 和 `deploy` 都成功，再打开 **https://frankgraen.github.io/frankg.github.io/**。
+5. 等待 `build` 和 `deploy` 都成功，再打开 **https://frankgraen.github.io/**。
    浏览器仍显示旧页面时，按 `Ctrl + F5` 强制刷新。
 
 仓库已附带自动部署工作流。之后可以直接在 GitHub 上编辑内容文件：打开文件，
 点击铅笔图标，完成后点击 **Commit changes**，提交到 `main`。Actions 将重新发布。
 
 GitHub Profile README 与这个网站是两项独立内容：README 使用同名仓库 FrankGraen/FrankGraen；
-网站使用 FrankGraen/frankg.github.io。
+网站使用 FrankGraen/FrankGraen.github.io。GitHub 个人页只能渲染 Markdown，
+不能直接运行 Astro 网站；个人资料 README 顶部已设置个人网站链接。
 
 ## 发布前检查
 
-- [ ] site_url 是账号域名，siteBase 与仓库名对应。
+- [ ] site_url 是账号域名，用户站点的 siteBase 为 /。
 - [ ] origin 指向自己的仓库，发布分支为 main 或 master。
 - [ ] 姓名、公开研究与技能准确，未展示公司或部门信息。
 - [ ] EgoPush 与 Humanoid Badminton 的项目网站、论文链接正确。

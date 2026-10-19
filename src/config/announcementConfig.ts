@@ -5,7 +5,7 @@ export const announcementConfig: AnnouncementConfig = {
 	title: "",
 
 	// 公告内容
-	content: "欢迎来到我的个人主页。这里记录机器人、世界模型与强化学习方向的公开研究与学习笔记。",
+	content: "欢迎来到我的个人主页。我正在研究 World Action Model（WAM），这里记录世界模型、动作建模与具身智能方向的公开研究与学习笔记。",
 
 	// 是否允许用户关闭公告
 	closable: true,

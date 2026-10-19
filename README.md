@@ -1,10 +1,10 @@
 
 # FrankGraen's Personal Website
 
-Robotics, world models and reinforcement learning. Built with Astro and the
+Researching World Action Model (WAM), world models and embodied intelligence. Built with Astro and the
 [Firefly theme](https://github.com/CuteLeaf/Firefly).
 
-- Website: https://frankgraen.github.io/frankg.github.io/
+- Website: https://frankgraen.github.io/
 - Setup, editing and publishing: [SITE-GUIDE.md](./SITE-GUIDE.md)
 - Content: `src/content/projects/`, `src/content/posts/`, `src/content/dynamic/`
 - Configuration: `src/config/`; GitHub Pages base: `siteBase` in `siteConfig.ts`

@@ -6,7 +6,7 @@ import { resolveSiteLang } from "../utils/site-config-utils";
 // 语言代码，例如：'zh_CN', 'zh_TW', 'en', 'ja', 'ru', 'ko'。
 const SITE_LANG = resolveSiteLang("zh_CN");
 
-export const siteBase = "/frankg.github.io/";
+export const siteBase = "/";
 
 // 页面开关配置 - 控制特定页面的访问权限，设为false会返回404并自动隐藏对应的导航栏菜单项
 const pages = resolvePageToggles({
@@ -47,18 +47,18 @@ export const siteConfig: SiteConfig = {
 	title: "FrankGraen",
 
 	// 站点副标题
-	subtitle: "Robotics & Embodied Intelligence",
+	subtitle: "World Action Model & Embodied Intelligence",
 
 	// 站点 URL
 	site_url: "https://frankgraen.github.io",
 
 	// 站点描述
 	description:
-		"FrankGraen / 王哲雄的个人主页。关注机器人、世界模型与强化学习，分享 EgoPush 与 Humanoid Badminton 等公开研究。",
+		"FrankGraen / 王哲雄的个人主页。研究 World Action Model（WAM），关注世界模型、动作建模与具身智能，分享 EgoPush 与 Humanoid Badminton 等公开研究。",
 
 	// 站点关键词
 	keywords: [
-		"FrankGraen", "Zhexiong Wang", "Robotics", "World Models", "Reinforcement Learning",
+		"FrankGraen", "Zhexiong Wang", "World Action Model", "WAM", "World Models", "Embodied Intelligence", "Robotics",
 	],
 
 	// 主题色
