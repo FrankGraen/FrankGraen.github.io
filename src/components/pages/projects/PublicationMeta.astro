@@ -1,0 +1,37 @@
+---
+interface Props {
+	authors: { name: string; marker?: string }[];
+	venue: string;
+	authorNotes?: string;
+}
+
+const { authors, venue, authorNotes } = Astro.props;
+---
+
+<div class="publication-meta">
+	{authors.length > 0 && (
+		<p class="authors text-75">
+			{authors.map((author, index) => (
+				<Fragment>
+					{index > 0 && ", "}
+					<span class="author">
+						{author.name === "Zhexiong Wang" ? <strong class="text-90">{author.name}</strong> : author.name}
+						{author.marker && <sup>{author.marker}</sup>}
+					</span>
+				</Fragment>
+			))}
+		</p>
+	)}
+	{venue && <p class="venue">{venue}</p>}
+	{authorNotes && <p class="author-notes text-50">{authorNotes}</p>}
+</div>
+
+<style>
+	.publication-meta { min-width: 0; }
+	.authors { margin: 0; font-size: 0.8125rem; line-height: 1.65; }
+	.author { display: inline-block; }
+	strong { font-weight: 700; }
+	sup { margin-left: 0.08em; font-size: 0.7em; }
+	.venue { margin-top: 0.5rem; font-size: 0.875rem; font-weight: 600; color: var(--primary); }
+	.author-notes { margin-top: 0.25rem; font-size: 0.6875rem; line-height: 1.5; }
+</style>

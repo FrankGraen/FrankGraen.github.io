@@ -7,18 +7,18 @@ import "@/styles/banner-home.css";
 const projects = await getSortedProjects();
 ---
 
-<MainGridLayout heading="FrankGraen · 王哲雄">
+<MainGridLayout heading="FrankGraen · Zhexiong Wang">
 	<section class="flex flex-col gap-4" aria-labelledby="research-title">
-		<h2 id="research-title" class="sr-only">研究项目</h2>
+		<h2 id="research-title" class="sr-only">Research</h2>
 		{projects.map((project) => (
 			<ProjectCard
 				id={project.id}
 				title={project.data.title}
+				authors={project.data.authors}
+				venue={project.data.venue}
+				authorNotes={project.data.authorNotes}
 				description={project.data.description}
 				image={project.data.image}
-				tags={project.data.tags}
-				published={project.data.published}
-				status={project.data.status}
 				link={project.data.link}
 			/>
 		))}

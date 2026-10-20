@@ -43,6 +43,9 @@ type ProjectLink = {
 
 type ProjectData = {
 	title: string;
+	authors: { name: string; marker?: string }[];
+	venue: string;
+	authorNotes: string;
 	published: Date;
 	draft: boolean;
 	order?: number;
@@ -109,6 +112,9 @@ const projectsCollection: ContentCollection<ProjectData> = defineCollection({
 	loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/projects" }),
 	schema: z.object({
 		title: z.string(),
+		authors: z.array(z.object({ name: z.string(), marker: z.string().optional() })).default([]),
+		venue: z.string().default(""),
+		authorNotes: z.string().default(""),
 		published: z.date(),
 		draft: z.boolean().optional().default(false),
 		order: z.number().optional(),

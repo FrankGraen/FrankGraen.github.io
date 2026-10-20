@@ -1,30 +1,28 @@
-# 关于我
+# About Me
 
-我是王哲雄（Zhexiong Wang），也使用 **FrankGraen** 这个名字。
+I am **Zhexiong Wang**, also known as **FrankGraen**.
 
-我正在研究 **World Action Model（WAM）**，关注世界模型、动作建模与具身智能。
-希望让机器人将对环境的理解与行动联系起来，更好地在真实世界中完成任务。
+I study **World Action Models (WAM)**, with interests in world models, action modeling, and embodied intelligence. My goal is to connect a robot's understanding of its environment with its actions in the physical world.
 
-## 研究与实践
+## Research
 
-- **当前研究方向**：World Action Model（WAM）、世界模型与动作建模。
-- **EgoPush**：第一视角下的移动机器人多物体重排。
-- **Humanoid Badminton**：基于有限人类动作数据的人形机器人羽毛球技能学习。
-- **相关关注**：VLA、Embodied Intelligence、Sim-to-Real。
+- **Current focus**: World Action Models, world models, and action modeling.
+- **EgoPush**: Egocentric multi-object rearrangement for mobile robots.
+- **Humanoid Badminton**: Learning dynamic humanoid racket skills from limited human motion data.
+- **Related interests**: Vision-Language-Action models, embodied intelligence, and sim-to-real transfer.
 
-## 技能
+## Skills
 
-| 方向 | 技术 |
+| Area | Technologies |
 | --- | --- |
-| 研究方向 | World Action Model（WAM）、World Models、动作建模 |
-| 编程 | Python、C++、C、MATLAB |
-| 深度学习 | PyTorch、CNN、Transformer、多模态学习 |
-| 策略学习与部署 | PPO、DDPG、层级强化学习、策略蒸馏、Sim-to-Real |
-| 机器人 | ROS2 Humble/Foxy、运动规划、PID、力矩柔顺控制 |
+| Research | World Action Models, world models, action modeling |
+| Programming | Python, C++, C, MATLAB |
+| Deep Learning | PyTorch, CNNs, Transformers, multimodal learning |
+| Policy Learning and Deployment | PPO, DDPG, hierarchical reinforcement learning, policy distillation, sim-to-real |
+| Robotics | ROS2 Humble/Foxy, motion planning, PID control, torque-based compliance control |
 
-## 联系方式
+## Contact
 
-- GitHub：[FrankGraen](https://github.com/FrankGraen)
-- 公开邮箱：【待填写】
-- 其他公开联系方式：【待填写】
+- Email: [frankgraen@gmail.com](mailto:frankgraen@gmail.com)
+- GitHub: [FrankGraen](https://github.com/FrankGraen)
 

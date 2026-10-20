@@ -3,8 +3,6 @@ import type { GetStaticPaths } from "astro";
 import Pagination from "@/components/common/Pagination.astro";
 import PostPage from "@/components/layout/PostPage.astro";
 import { siteConfig } from "@/config";
-import I18nKey from "@/i18n/i18nKey";
-import { i18n } from "@/i18n/translation";
 import MainGridLayout from "@/layouts/MainGridLayout.astro";
 import "@/styles/banner-home.css";
 import { getSortedPosts } from "@/utils/content-utils";
@@ -23,16 +21,16 @@ const len = page.data.length;
 // 列表页隐藏的 h1：首屏用站点标题，后续页用「首页 · 页码」，避免空 h1
 const heading =
 	page.currentPage === 1
-		? "笔记"
-		: `${i18n(I18nKey.home)} · ${page.currentPage}`;
+		? "Notes"
+		: `Notes · ${page.currentPage}`;
 ---
 
 <MainGridLayout heading={heading}>
   <header class="px-6 py-5 mb-4">
-    <h2 class="text-2xl font-bold">笔记</h2>
-    <p class="mt-2 text-neutral-500">机器人、学习与实践。</p>
+    <h2 class="text-2xl font-bold">Notes</h2>
+    <p class="mt-2 text-neutral-500">Robotics, learning, and experiments.</p>
   </header>
-  {len === 0 && <p class="px-6 py-8 text-neutral-500">暂时没有公开笔记。</p>}
+  {len === 0 && <p class="px-6 py-8 text-neutral-500">No public notes yet.</p>}
   <PostPage page={page} />
   {
     page.total > page.size && (

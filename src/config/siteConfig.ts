@@ -4,7 +4,7 @@ import { resolveSiteLang } from "../utils/site-config-utils";
 
 // 定义站点语言
 // 语言代码，例如：'zh_CN', 'zh_TW', 'en', 'ja', 'ru', 'ko'。
-const SITE_LANG = resolveSiteLang("zh_CN");
+const SITE_LANG = resolveSiteLang("en");
 
 export const siteBase = "/";
 
@@ -54,7 +54,7 @@ export const siteConfig: SiteConfig = {
 
 	// 站点描述
 	description:
-		"FrankGraen / 王哲雄的个人主页。研究 World Action Model（WAM），关注世界模型、动作建模与具身智能，分享 EgoPush 与 Humanoid Badminton 等公开研究。",
+		"Zhexiong Wang (FrankGraen). Research on World Action Models, world models, and embodied intelligence, including EgoPush and Humanoid Badminton.",
 
 	// 站点关键词
 	keywords: [

@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
+import sanitizeHtml from "sanitize-html";
 
 const root = resolve(process.argv[2] || "dist");
 const home = await readFile(resolve(root, "index.html"), "utf8");
@@ -36,5 +37,24 @@ for (const route of ["projects", "notes", "about"]) {
 }
 const about = await readFile(resolve(root, "about/index.html"), "utf8");
 assert.match(about, /World Action Model/, "About must identify WAM as the current research direction");
-assert.match(about, /待填写/, "Contact details must remain placeholders");
+const encodedEmail = Buffer.from("frankgraen@gmail.com").toString("base64");
+assert.ok(about.includes('href="mailto:frankgraen@gmail.com"') || about.includes(`data-encoded-email="${encodedEmail}"`), "About must provide the public email address, including the theme's protected links");
+assert.ok(sanitizeHtml(about, { allowedTags: [], allowedAttributes: {} }).includes("frankgraen@gmail.com"), "About must display the public email address");
+assert.doesNotMatch(about, /待填写|未填写|TBD|Other contact/i, "About must not contain contact placeholders");
+for (const route of ["index.html", "projects/index.html", "projects/egopush/index.html", "projects/humanoid-badminton/index.html", "about/index.html", "notes/index.html", "dynamic/index.html"]) {
+	const html = await readFile(resolve(root, route), "utf8");
+	assert.match(html, /<html[^>]*lang="en"/, `${route} must declare English`);
+	const text = sanitizeHtml(html, { allowedTags: [], allowedAttributes: {} });
+	assert.doesNotMatch(text, /\p{Script=Han}/u, `${route} must display English content only`);
+}
+for (const route of ["index.html", "projects/index.html"]) {
+	const html = await readFile(resolve(root, route), "utf8");
+	assert.match(html, /Humanoid Badminton: Learning Dynamic Racket Skills from Limited Human Motion Data/);
+	assert.match(html, /EgoPush: Egocentric Multi-Object Rearrangement for Mobile Robots via Constrained Teacher Observability/);
+	assert.match(html, /<strong[^>]*>Zhexiong Wang<\/strong>/, "Research must highlight the site owner's name");
+	assert.match(html, /CoRL 2026/, "Research must display the accepted conference");
+	assert.match(html, /arXiv preprint, 2026/, "Preprints must be identified separately from conference papers");
+	assert.ok(html.indexOf("Humanoid Badminton:") < html.indexOf("EgoPush:"), "Research must list newer work first");
+	assert.doesNotMatch(html, /data-status="(?:planning|developing|published|archived)"/, "Research must not use software development status filters");
+}
 console.log("Profile smoke checks passed: identity, routes, project lists, contacts, sidebars, banner font and company removal.");

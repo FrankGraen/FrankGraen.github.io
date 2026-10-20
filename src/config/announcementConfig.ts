@@ -5,7 +5,7 @@ export const announcementConfig: AnnouncementConfig = {
 	title: "",
 
 	// 公告内容
-	content: "欢迎来到我的个人主页。我正在研究 World Action Model（WAM），这里记录世界模型、动作建模与具身智能方向的公开研究与学习笔记。",
+	content: "I study World Action Models (WAM), with interests in world models, action modeling, and embodied intelligence.",
 
 	// 是否允许用户关闭公告
 	closable: true,
@@ -14,7 +14,7 @@ export const announcementConfig: AnnouncementConfig = {
 		// 启用链接
 		enable: true,
 		// 链接文本
-		text: "了解更多",
+		text: "About me",
 		// 链接 URL
 		url: "/about/",
 		// 内部链接

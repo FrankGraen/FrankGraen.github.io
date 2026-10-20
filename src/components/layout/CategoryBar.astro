@@ -80,7 +80,7 @@ function initialActive(categoryName: string): {
           data-category-name="__projects__"
           data-active={pathname === url("/projects/").replace(/\/$/, "") ? "" : undefined}
         >
-          研究项目 <span class="pill-count">{totalProjects}</span>
+          {i18n(I18nKey.projects)} <span class="pill-count">{totalProjects}</span>
         </a>
         <a
           href={url("/notes/")}
@@ -88,7 +88,7 @@ function initialActive(categoryName: string): {
           data-category-name="__notes__"
           data-active={pathname === url("/notes/").replace(/\/$/, "") ? "" : undefined}
         >
-          笔记 <span class="pill-count">{totalPosts}</span>
+          Notes <span class="pill-count">{totalPosts}</span>
         </a>
         {
           categories.map((cat) => {
